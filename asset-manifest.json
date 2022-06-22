@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Verbos-Ingles/static/css/main.a5c9ff4a.css",
+    "main.js": "/Verbos-Ingles/static/js/main.14628e00.js",
+    "index.html": "/Verbos-Ingles/index.html",
+    "main.a5c9ff4a.css.map": "/Verbos-Ingles/static/css/main.a5c9ff4a.css.map",
+    "main.14628e00.js.map": "/Verbos-Ingles/static/js/main.14628e00.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a5c9ff4a.css",
+    "static/js/main.14628e00.js"
+  ]
+}
