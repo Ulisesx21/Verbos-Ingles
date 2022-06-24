@@ -139,23 +139,29 @@ body {
 
 @media (max-width: 768px) {
 
-  .body{
-    height: 100%;
-    width: 100%;
-  }
-
   .container {
     width: 90vw;
+    margin-top: 15px;
   }
 
   .container h1{
     font-size: 2.2em;
   }
 
+  .visor-container{
+    width: 65%;
+  }
+
+  .porcentaje{
+    font-size: 2.4em;
+    
+  }
+  .visto{
+    font-size: 2.4em;
+  }
+
   #titulo {
-    width: 90vw;
-    font-size: 1.8em;
-    margin: 50px;
+    display:none;
   }
 
   .incorrecto {
