@@ -78,13 +78,15 @@ body {
   width: 500px;
   background: #ddd;
   border-radius: 10px;
-  border: 1px solid black;
-  background: linear-gradient(rgb(171, 217, 255),rgb(140, 203, 255))
+  border: 2px solid black;
+  background: url("./universe.jpg");
+  box-shadow: 10px 5px 5px black;;
 }
 
 .container h1 {
-  font-size: 2.35em;
+  font-size: 2.5em;
   margin: 20px;
+  color: white;
 }
 
 .container h2 {
@@ -95,7 +97,7 @@ body {
   height: 33px;
   width: 215.6px;
   margin: 20px;
-  border: 1px solid black;
+  border: 2px solid black;
   padding: 4px;
   font-size: 16.5px;
   outline: none;
@@ -108,7 +110,7 @@ body {
   align-items: center;
   height: 33px;
   width: 215.6px;
-  border: 1px solid black;
+  border: 2px solid black;
   background: rgb(240, 240, 240);
   font-size: 18px;
 }
