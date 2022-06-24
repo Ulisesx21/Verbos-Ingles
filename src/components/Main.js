@@ -8,7 +8,9 @@ export default function Main(props){
             <div className="show" onClick={props.handleClick}>
                 {props.boolean ? props.Verbos[props.count].respuesta : <img className="img" src="https://cdn-icons-png.flaticon.com/512/64/64943.png"></img>}
             </div>
-            <h2 className="incorrecto">{props.input}</h2>
+            <div className="incorrecto-container">
+                <h2 className="incorrecto">{props.input}</h2>
+            </div>
         </div>
     )
 }

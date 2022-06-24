@@ -2,6 +2,7 @@ import './App.css';
 import { useState, useRef } from 'react';
 import Main from "./components/Main"
 import Verbos from "./components/Verbos"
+import Visor from './components/Visor';
 
 
 
@@ -10,6 +11,7 @@ function App() {
   let [input, setInput] = useState("")
   let [state, setState] = useState(0)
   let [count, setCount] = useState(0)
+  let [countVisor, setCountVisor] = useState(0)
   let [boolean, setBoolean] = useState(false)
   let [counterState, setCounterState] = useState(true)
   let [gameState, setGameState] = useState(true)
@@ -22,9 +24,11 @@ function App() {
           if (state >= Verbos.length - 1) {
             setInput("Finalizado")
             e.target.value = ""
+            setCountVisor(countVisor + 1)
             setGameState(false)
           } else {
             setState(state + 1)
+            setCountVisor(countVisor + 1)
             setInput("")
             setBoolean(false)
             setCounterState(true)
@@ -51,7 +55,7 @@ function App() {
 
   return (
     <div className="App">
-      {count}
+      <Visor visor={count} arrlength={Verbos.length} completado={countVisor}/>
       <h1 id="titulo">Los 100 verbos más usados en inglés</h1>
       <Main input={input} handleClick={handleClick} handleChange={handleChange} Verbos={Verbos} count={state} boolean={boolean} gameState={gameState} />
     </div>
