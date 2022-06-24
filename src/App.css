@@ -139,6 +139,11 @@ body {
 
 @media (max-width: 768px) {
 
+  .body{
+    height: 100%;
+    width: 100%;
+  }
+
   .container {
     width: 90vw;
   }
