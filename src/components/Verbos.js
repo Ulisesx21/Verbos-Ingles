@@ -44,6 +44,15 @@ let Verbos = [{verbo: "accept",respuesta: "aceptar"},
                 {verbo: "know",respuesta: "saber"},
                 {verbo: "let",respuesta: "dejar"},
                 {verbo: "learn",respuesta: "aprender"},
+                {verbo: "leave",respuesta: "marcharse"},
+                {verbo: "listen",respuesta: "escuchar"},
+                {verbo: "live",respuesta: "vivir"},
+                {verbo: "look",respuesta: "mirar"},
+                {verbo: "lose",respuesta: "perder"},
+                {verbo: "make",respuesta: "hacer"},
+                {verbo: "meet",respuesta: "conocer"},
+                {verbo: "move",respuesta: "mover"},
+                {verbo: "need",respuesta: "necesitar"},
             ]
 
 export default Verbos

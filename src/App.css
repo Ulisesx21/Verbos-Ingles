@@ -80,7 +80,7 @@ body {
   border-radius: 10px;
   border: 2px solid black;
   background: url("./universe.jpg");
-  box-shadow: 10px 5px 5px black;;
+  box-shadow: 5px 5px 10px black;
 }
 
 .container h1 {
@@ -128,7 +128,7 @@ body {
 }
 
 .incorrecto {
-  
+  color: white;
   margin: 20px;
 }
 
@@ -147,7 +147,7 @@ body {
   }
 
   .container h1{
-    font-size: 2.2em;
+    font-size: 2.3em;
   }
 
   .visor-container{
