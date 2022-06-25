@@ -1,9 +1,9 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-family: Consolas;
-  letter-spacing: 1px;
-  font-weight: 500;
+  font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: 1.1px;
+  font-weight: 400;
   box-sizing: border-box;
 }
 
@@ -56,7 +56,7 @@ body {
 .img-visto {
   height: 30px;
   width: 30px;
-  margin-right: 3px;
+  margin-right: 4px;
 }
 
 #titulo {
@@ -84,7 +84,7 @@ body {
 }
 
 .container h1 {
-  font-size: 2.5em;
+  font-size: 2.65em;
   margin: 20px;
   color: white;
 }
@@ -98,10 +98,11 @@ body {
   width: 215.6px;
   margin: 20px;
   border: 2px solid black;
-  padding: 4px;
+  padding: 5px;
   font-size: 16.5px;
   outline: none;
   color: rgb(0, 0, 0);
+  border-radius: 10px;
 }
 
 .show {
@@ -113,6 +114,7 @@ body {
   border: 2px solid black;
   background: rgb(240, 240, 240);
   font-size: 18px;
+  border-radius: 10px;
 }
 
 .show:hover{
@@ -147,11 +149,11 @@ body {
   }
 
   .container h1{
-    font-size: 2.3em;
+    font-size: 2.45em;
   }
 
   .visor-container{
-    width: 65%;
+    width: 72%;
   }
 
   .porcentaje{
