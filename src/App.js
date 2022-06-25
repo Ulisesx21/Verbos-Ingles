@@ -55,7 +55,6 @@ function App() {
 
   return (
     <div className="App">
-      {Verbos.length}
       <Visor visor={count} arrlength={Verbos.length} completado={countVisor}/>
       <h1 id="titulo">Los 100 verbos más usados en inglés</h1>
       <Main input={input} handleClick={handleClick} handleChange={handleChange} Verbos={Verbos} count={state} boolean={boolean} gameState={gameState} />

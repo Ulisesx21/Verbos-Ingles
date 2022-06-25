@@ -44,6 +44,7 @@ body {
   font-size: 2.5em;
   background: rgb(240, 240, 240);
   border-radius: 5px;
+  box-shadow: 3px 3px 5px black;
 }
 
 .visto{
@@ -51,6 +52,7 @@ body {
   font-size: 2.5em;
   background: rgb(240, 240, 240);
   border-radius: 5px;
+  box-shadow: 3px 3px 5px black;
 }
 
 .img-visto {
@@ -67,6 +69,7 @@ body {
   background: rgb(240, 240, 240);
   border-radius: 10px;
   padding: 10px;
+  box-shadow: 3px 3px 5px black;
 }
 
 .container {
@@ -87,6 +90,7 @@ body {
   font-size: 2.65em;
   margin: 20px;
   color: white;
+  text-shadow: 1.5px 1.5px 6px black, -1.5px -1.5px 6px black;
 }
 
 .container h2 {
