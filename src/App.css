@@ -1,7 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto', sans-serif;
   letter-spacing: 1.1px;
   font-weight: 400;
   box-sizing: border-box;
@@ -39,32 +39,48 @@ body {
   justify-content: space-between;
 }
 
-.porcentaje{
-  padding: 6px;
-  font-size: 2.5em;
+.porcentaje-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visto-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 78.61px;
   background: rgb(240, 240, 240);
-  border-radius: 5px;
+  border-radius: 0px 0px 5px 5px;
   box-shadow: 3px 3px 5px black;
+  padding-left: 8px;
+}
+
+.porcentaje{
+  padding: 5px;
+  font-size: 2.2em;
+  width: 78.61px;
+  background: rgb(240, 240, 240);
+  border-radius: 0px 0px 5px 5px;
+  box-shadow: 3px 3px 5px black;
+  text-align: center;
 }
 
 .visto{
-  padding: 6px;
-  font-size: 2.5em;
-  background: rgb(240, 240, 240);
-  border-radius: 5px;
-  box-shadow: 3px 3px 5px black;
+  padding: 5px;
+  font-size: 2.2em;
+  text-align: center;
 }
 
 .img-visto {
   height: 30px;
   width: 30px;
-  margin-right: 4px;
 }
 
 #titulo {
-  font-size: 2.5em;
+  font-size: 2.4em;
   margin: 100px;
-  margin-top: calc(100px - 47px);
+  margin-top: calc(100px - 17.4px);
   color: rgb(0, 0, 0);
   background: rgb(240, 240, 240);
   border-radius: 10px;
@@ -81,16 +97,16 @@ body {
   width: 500px;
   background: #ddd;
   border-radius: 10px;
-  border: 2px solid black;
+  border: 1px solid black;
   background: url("./universe.jpg");
-  box-shadow: 5px 5px 10px black;
+  box-shadow: 5px 5px 8px black,-5px -5px 8px black;
 }
 
 .container h1 {
-  font-size: 2.65em;
+  font-size: 2.55em;
   margin: 20px;
   color: white;
-  text-shadow: 1.5px 1.5px 6px black, -1.5px -1.5px 6px black;
+  text-shadow: 1.6px 1.6px 6px black, -1.6px -1.6px 6px black, 1.6px 1.6px 6px black, -1.6px -1.6px 6px black;
 }
 
 .container h2 {
@@ -101,7 +117,7 @@ body {
   height: 33px;
   width: 215.6px;
   margin: 20px;
-  border: 2px solid black;
+  border: 1px solid black;
   padding: 5px;
   font-size: 16.5px;
   outline: none;
@@ -115,7 +131,7 @@ body {
   align-items: center;
   height: 33px;
   width: 215.6px;
-  border: 2px solid black;
+  border: 1px solid black;
   background: rgb(240, 240, 240);
   font-size: 18px;
   border-radius: 10px;
@@ -149,7 +165,9 @@ body {
 
   .container {
     width: 90vw;
+    height: 280px;
     margin-top: 15px;
+    box-shadow: none;
   }
 
   .container h1{
@@ -161,11 +179,10 @@ body {
   }
 
   .porcentaje{
-    font-size: 2.4em;
-    
+    font-size: 2em;
   }
   .visto{
-    font-size: 2.4em;
+    font-size: 2em;
   }
 
   #titulo {
