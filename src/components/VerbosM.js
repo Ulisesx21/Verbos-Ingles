@@ -1,4 +1,4 @@
-let Verbos = [{verbo: "accept",respuesta: "aceptar"},
+let VerbosM = [{verbo: "accept",respuesta: "aceptar"},
                 {verbo: "ask",respuesta: "preguntar"},
                 {verbo: "begin",respuesta: "empezar"},
                 {verbo: "become",respuesta: "convertirse"},
@@ -98,6 +98,6 @@ let Verbos = [{verbo: "accept",respuesta: "aceptar"},
                 {verbo: "work",respuesta: "trabajar"},
                 {verbo: "worry",respuesta: "preocuparse"},
                 {verbo: "write",respuesta: "escribir"},
-            ]
+            ]      
 
-export default Verbos
+export default VerbosM;

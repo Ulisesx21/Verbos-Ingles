@@ -1,7 +1,9 @@
 import './App.css';
 import { useState, useRef } from 'react';
 import Main from "./components/Main";
-import Verbos from "./components/Verbos"
+import VerbosM from "./components/VerbosM";
+import VerbosE from './components/VerbosE';
+import VerbosD from './components/VerbosD';
 import Visor from './components/Visor';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
@@ -13,10 +15,12 @@ function App() {
   let [input, setInput] = useState("")
   let [state, setState] = useState(0)
   let [count, setCount] = useState(0)
+  let [Verbos, setVerbos] = useState(VerbosE)
   let [countVisor, setCountVisor] = useState(0)
   let [boolean, setBoolean] = useState(false)
   let [counterState, setCounterState] = useState(true)
   let [gameState, setGameState] = useState(true)
+
 
   function handleChange(e) {
 
@@ -54,12 +58,53 @@ function App() {
     }
   }
 
+  function handleDif(e){
+    if(e.target.value == "easy"){
+      setVerbos(Verbos = VerbosE)
+      setState(state = 0)
+      setCountVisor(countVisor = 0)
+      setCount(count = 0)
+      setInput("")
+      setBoolean(boolean = false)
+      setCounterState(counterState = true)
+      setGameState(true)
+    }
+    if(e.target.value == "medium"){
+      setVerbos(Verbos = VerbosM)
+      setState(state = 0)
+      setCountVisor(countVisor = 0)
+      setCount(count = 0)
+      setInput("")
+      setBoolean(boolean = false)
+      setCounterState(counterState = true)
+      setGameState(true)
+    }
+    if(e.target.value == "hard"){
+      setVerbos(Verbos = VerbosD)
+      setState(state = 0)
+      setCountVisor(countVisor = 0)
+      setCount(count = 0)
+      setInput("")
+      setBoolean(boolean = false)
+      setCounterState(counterState = true)
+      setGameState(true)
+    }
+  }
+
 
   return (
     <div className="App">
-      <Visor visor={count} arrlength={Verbos.length} completado={countVisor} icon={<FontAwesomeIcon icon={faEye} />}/>
-      <h1 id="titulo">Los 100 verbos más usados en inglés</h1>
-      <Main input={input} handleClick={handleClick} handleChange={handleChange} Verbos={Verbos} count={state} boolean={boolean} gameState={gameState} icon={<FontAwesomeIcon icon={faEye} />}/>
+      <Visor visor={count} arrlength={Verbos.length} completado={countVisor} icon={<FontAwesomeIcon icon={faEye} />} />
+      <h1 id="titulo">Traduzca {Verbos.length} {Verbos == VerbosM ? "verbos" : "palabras"} de Ingles a Español</h1>
+      <Main input={input} handleClick={handleClick} handleChange={handleChange} Verbos={Verbos} count={state} boolean={boolean} gameState={gameState} icon={<FontAwesomeIcon icon={faEye} />} />
+      <div className='dificulty'>
+        <p>Dificultad</p>
+        <select onChange={handleDif}>
+          <option value="easy">Facil</option>
+          <option value="medium" select="true">Medio</option>
+          <option value="hard">Dificil</option>
+        </select>
+      </div>
     </div>
   );
 }

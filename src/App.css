@@ -34,7 +34,7 @@ body {
 }
 
 .visor-container{
-  width: 50%;
+  width: 480px;
   display: flex;
   justify-content: space-between;
 }
@@ -43,6 +43,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.p{
+  font-size: 22px;
 }
 
 .visto-container{
@@ -57,8 +61,11 @@ body {
 }
 
 .porcentaje{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 5px;
-  font-size: 2.2em;
+  font-size: 2.05em;
   width: 78.61px;
   background: rgb(240, 240, 240);
   border-radius: 0px 0px 5px 5px;
@@ -68,7 +75,7 @@ body {
 
 .visto{
   padding: 5px;
-  font-size: 2.2em;
+  font-size: 2.05em;
   text-align: center;
 }
 
@@ -159,14 +166,34 @@ body {
   width: 26px;
 }
 
+.dificulty{
+  display: flex;
+  margin: 20px;
+  margin-top: 80px;
+  padding: 15px;
+  background: rgb(240, 240, 240);
+  box-shadow: 3px 3px 5px black;
+  border-radius: 10px;
+}
+
+.dificulty p{
+  margin-right: 15px;
+  font-size: 1.8em;
+}
+
+.dificulty select{
+  height: 33px;
+  font-size: 16px;
+}
+
 
 
 @media (max-width: 768px) {
 
   .container {
     width: 90vw;
-    height: 280px;
-    margin-top: 15px;
+    height: 290px;
+    margin-top: 20px;
     box-shadow: none;
   }
 
@@ -181,6 +208,11 @@ body {
   .porcentaje{
     font-size: 2em;
   }
+
+  .p{
+    font-size: 22px;
+  }
+
   .visto{
     font-size: 2em;
   }
