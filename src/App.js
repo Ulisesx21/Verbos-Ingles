@@ -98,7 +98,7 @@ function App() {
       <h1 id="titulo">Traduzca {Verbos.length} {Verbos == VerbosM ? "verbos" : "palabras"} de Ingles a Español</h1>
       <Main input={input} handleClick={handleClick} handleChange={handleChange} Verbos={Verbos} count={state} boolean={boolean} gameState={gameState} icon={<FontAwesomeIcon icon={faEye} />} />
       <div className='dificulty'>
-        <p>Dificultad</p>
+        <h3>Dificultad</h3>
         <select onChange={handleDif}>
           <option value="easy">Facil</option>
           <option value="medium" select="true">Medio</option>

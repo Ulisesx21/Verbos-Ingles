@@ -10,7 +10,14 @@ let VerbosE = [{verbo: "dog",respuesta: "perro"},
                 {verbo: "turtle",respuesta: "tortuga"},
                 {verbo: "giraffe",respuesta: "jirafa"},
                 {verbo: "elephant",respuesta: "elefante"},
+                {verbo: "duck",respuesta: "pato"},
+                {verbo: "bird",respuesta: "pajaro"},
                 {verbo: "cow",respuesta: "vaca"},
+                {verbo: "hello",respuesta: "hola"},
+                {verbo: "bye",respuesta: "adios"},
+                {verbo: "sorry",respuesta: "perdon"},
+                {verbo: "thank you",respuesta: "gracias"},
+                {verbo: "stop",respuesta: "parar"},
                 {verbo: "red",respuesta: "rojo"},
                 {verbo: "blue",respuesta: "azul"},
                 {verbo: "yellow",respuesta: "amarillo"},
@@ -21,6 +28,7 @@ let VerbosE = [{verbo: "dog",respuesta: "perro"},
                 {verbo: "brown",respuesta: "marron"},
                 {verbo: "black",respuesta: "negro"},
                 {verbo: "white",respuesta: "blanco"},
+                
 ]
 
 export default VerbosE;
