@@ -19,7 +19,15 @@ let VerbosD = [{verbo: "readability",respuesta: "legibilidad"},
                 {verbo: "stints",respuesta: "temporadas"}, 
                 {verbo: "abroad",respuesta: "extranjero"}, 
                 {verbo: "drilling",respuesta: "perforacion"},
-                {verbo: "overturning",respuesta: "anular"},                
+                {verbo: "overturning",respuesta: "anular"},
+                {verbo: "drought",respuesta: "sequia"},
+                {verbo: "shortages",respuesta: "escazes"},
+                {verbo: "etched",respuesta: "grabado"},
+                {verbo: "worldly",respuesta: "mundano"},
+                {verbo: "bossy",respuesta: "mandon"},
+                {verbo: "sweep",respuesta: "barrer"},
+                {verbo: "windy",respuesta: "ventoso"}, 
+                {verbo: "bitter",respuesta: "amargo"},               
 ]
 
 export default VerbosD;
