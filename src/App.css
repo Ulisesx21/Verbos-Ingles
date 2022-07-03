@@ -56,7 +56,7 @@ body {
   width: 80px;
   background: rgb(240, 240, 240);
   border-radius: 0px 0px 5px 5px;
-  box-shadow: 3px 3px 5px black;
+  box-shadow: 3px 3px 3px black;
   padding-left: 5px;
 }
 
@@ -69,7 +69,7 @@ body {
   width: 80px;
   background: rgb(240, 240, 240);
   border-radius: 0px 0px 5px 5px;
-  box-shadow: 3px 3px 5px black;
+  box-shadow: 3px 3px 3px black;
   text-align: center;
   transition: all 0.5s ease-out;
 }
@@ -88,7 +88,7 @@ body {
   background: rgb(240, 240, 240);
   border-radius: 10px;
   padding: 10px;
-  box-shadow: 3px 3px 5px black;
+  box-shadow: 3px 3px 3px black;
 }
 
 .container {
@@ -169,7 +169,7 @@ body {
   margin-top: 83px;
   padding: 10px;
   background: rgb(240, 240, 240);
-  box-shadow: 3px 3px 5px black;
+  box-shadow: 3px 3px 3px black;
   border-radius: 10px;
 }
 
@@ -184,7 +184,19 @@ body {
   padding: 1px;
 }
 
-
+.ayuda{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: rgb(240, 240, 240);
+  box-shadow: 3px 3px 5px rgb(0, 0, 0);
+  margin-top: 120px;
+  cursor: pointer;
+  font-size: 23px;
+}
 
 @media (max-width: 768px) {
 

@@ -7,7 +7,7 @@ import VerbosM from "./components/VerbosM";
 import VerbosH from './components/VerbosH';
 import Dificulty from './components/Dificulty';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye } from '@fortawesome/free-solid-svg-icons';
+import { faEye, faQuestion, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -88,7 +88,7 @@ function App() {
     <div className="App">
       <Visor visor={count} arrlength={Verbos.length} completado={countVisor} icon={<FontAwesomeIcon icon={faEye} />} />
       <h1 id="titulo">Traduzca {Verbos.length} {Verbos == VerbosM ? "verbos" : "palabras"} de Ingles a Español</h1>
-      <Main input={input} handleClick={handleClick} handleChange={handleChange} Verbos={Verbos} count={state} boolean={boolean} gameState={gameState} icon={<FontAwesomeIcon icon={faEye} />} />
+      <Main input={input} handleClick={handleClick} handleChange={handleChange} Verbos={Verbos} count={state} boolean={boolean} gameState={gameState} icon={<FontAwesomeIcon icon={faEye}/>} />
       <Dificulty handleDif={handleDif}/>
     </div>
   );
