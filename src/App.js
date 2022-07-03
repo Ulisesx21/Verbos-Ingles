@@ -1,10 +1,10 @@
 import './App.css';
 import { useState } from 'react';
-import Main from "./components/Main";
-import VerbosM from "./components/VerbosM";
-import VerbosE from './components/VerbosE';
-import VerbosD from './components/VerbosD';
 import Visor from './components/Visor';
+import Main from "./components/Main";
+import VerbosE from './components/VerbosE';
+import VerbosM from "./components/VerbosM";
+import VerbosH from './components/VerbosH';
 import Dificulty from './components/Dificulty';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
@@ -26,7 +26,7 @@ function App() {
   function handleChange(e) {
     if (e.key == "Enter") {
       if (gameState) {
-        if (e.target.value.toLowerCase() == Verbos[state].respuesta) {
+        if (Verbos[state].respuesta.includes(e.target.value.toLowerCase())) {
           if (state >= Verbos.length - 1) {
             setInput("Finalizado")
             e.target.value = ""
@@ -68,7 +68,7 @@ function App() {
       reset()
     }
     if(e.target.value == "hard"){
-      setVerbos(Verbos = VerbosD)
+      setVerbos(Verbos = VerbosH)
       reset()
     }
   }
