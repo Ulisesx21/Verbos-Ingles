@@ -2,9 +2,10 @@ import './App.css';
 import { useState } from 'react';
 import Visor from './components/Visor';
 import Main from "./components/Main";
-import VerbosE from './components/VerbosE';
-import VerbosM from "./components/VerbosM";
-import VerbosH from './components/VerbosH';
+import VerbosE from './components/Verbos/VerbosE';
+import VerbosM from "./components/Verbos/VerbosM";
+import VerbosH from './components/Verbos/VerbosH';
+import VerbosM2 from './components/Verbos/VerbosM2';
 import Dificulty from './components/Dificulty';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faQuestion, faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -21,6 +22,8 @@ function App() {
   let [boolean, setBoolean] = useState(false)
   let [counterState, setCounterState] = useState(true)
   let [gameState, setGameState] = useState(true)
+
+  let iconEye = <FontAwesomeIcon icon={faEye}/>
 
 
   function handleChange(e) {
@@ -63,8 +66,12 @@ function App() {
       setVerbos(Verbos = VerbosE)
       reset()
     }
-    if(e.target.value == "medium"){
+    if(e.target.value == "mediumI.I"){
       setVerbos(Verbos = VerbosM)
+      reset()
+    }
+    if(e.target.value == "mediumI.II"){
+      setVerbos(Verbos = VerbosM2)
       reset()
     }
     if(e.target.value == "hard"){
@@ -86,10 +93,26 @@ function App() {
   
   return (
     <div className="App">
-      <Visor visor={count} arrlength={Verbos.length} completado={countVisor} icon={<FontAwesomeIcon icon={faEye} />} />
-      <h1 id="titulo">Traduzca {Verbos.length} {Verbos == VerbosM ? "verbos" : "palabras"} de Ingles a Español</h1>
-      <Main input={input} handleClick={handleClick} handleChange={handleChange} Verbos={Verbos} count={state} boolean={boolean} gameState={gameState} icon={<FontAwesomeIcon icon={faEye}/>} />
-      <Dificulty handleDif={handleDif}/>
+      <Visor 
+            visor={count} 
+            arrlength={Verbos.length} 
+            completado={countVisor} 
+            icon={<FontAwesomeIcon icon={faEye} />} 
+      />
+      <h1 id="titulo">Traduzca {Verbos.length} {Verbos == VerbosM || Verbos == VerbosM2 ? "verbos" : "palabras"} de Ingles a Español</h1>                            
+      <Main 
+            input={input} 
+            handleClick={handleClick} 
+            handleChange={handleChange} 
+            Verbos={Verbos} 
+            count={state} 
+            boolean={boolean} 
+            gameState={gameState} 
+            icon={iconEye} 
+      />
+      <Dificulty 
+            handleDif={handleDif}
+      />
     </div>
   );
 }
