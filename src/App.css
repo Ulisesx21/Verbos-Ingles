@@ -7,22 +7,6 @@
   box-sizing: border-box;
 }
 
-html {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  height: 100%;
-}
-
-.App {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
 body {
   display: flex;
   justify-content: center;
@@ -31,6 +15,14 @@ body {
   background: rgb(255, 255, 255);
   background-image: url("https://i.pinimg.com/originals/da/a3/24/daa3245ca585582f2f0baf7d180c6d93.jpg");
   object-fit: cover;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .visor-container{
@@ -135,7 +127,7 @@ body {
   height: 33px;
   width: 215.6px;
   border: 1px solid black;
-  background: rgb(240, 240, 240);
+  background: rgb(235, 235, 235);
   font-size: 18px;
   border-radius: 10px;
 }
@@ -145,7 +137,7 @@ body {
 }
 
 .show:active{
-  background: rgb(235, 235, 235);
+  background: rgb(226, 226, 226);
 }
 
 .incorrecto-container{

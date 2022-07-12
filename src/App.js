@@ -8,7 +8,7 @@ import VerbosH from './components/Verbos/VerbosH';
 import VerbosM2 from './components/Verbos/VerbosM2';
 import Dificulty from './components/Dificulty';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faQuestion, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -20,12 +20,15 @@ function App() {
   let [Verbos, setVerbos] = useState(VerbosE)
   let [countVisor, setCountVisor] = useState(0)
   let [boolean, setBoolean] = useState(false)
+  let [inputBoolean, setInputBoolean] = useState(false)
   let [counterState, setCounterState] = useState(true)
   let [gameState, setGameState] = useState(true)
+
 
   let iconEye = <FontAwesomeIcon icon={faEye}/>
 
 
+  // Logica del Juego
   function handleChange(e) {
     if (e.key == "Enter") {
       if (gameState) {
@@ -35,6 +38,7 @@ function App() {
             e.target.value = ""
             setCountVisor(countVisor + 1)
             setGameState(false)
+            setInputBoolean(true)
           } else {
             setState(state + 1)
             setCountVisor(countVisor + 1)
@@ -51,6 +55,7 @@ function App() {
     }
   }
 
+  // Contador de Palabras vistas
   function handleClick(e) {
     if (gameState) {
       setBoolean(!boolean)
@@ -61,25 +66,27 @@ function App() {
     }
   }
 
+  // Cambio de Dificultad
   function handleDif(e){
-    if(e.target.value == "easy"){
-      setVerbos(Verbos = VerbosE)
+    if(e.target.value === "easy"){
+      setVerbos(VerbosE)
       reset()
     }
-    if(e.target.value == "mediumI.I"){
-      setVerbos(Verbos = VerbosM)
+    if(e.target.value === "mediumI.I"){
+      setVerbos(VerbosM)
       reset()
     }
-    if(e.target.value == "mediumI.II"){
-      setVerbos(Verbos = VerbosM2)
+    if(e.target.value === "mediumI.II"){
+      setVerbos(VerbosM2)
       reset()
     }
-    if(e.target.value == "hard"){
-      setVerbos(Verbos = VerbosH)
+    if(e.target.value === "hard"){
+      setVerbos(VerbosH)
       reset()
     }
   }
 
+  // Reset de los Estados
   function reset(){
     setState(state = 0)
     setCountVisor(countVisor = 0)
@@ -88,6 +95,7 @@ function App() {
     setBoolean(boolean = false)
     setCounterState(counterState = true)
     setGameState(true)
+    setInputBoolean(false)
 }
 
   
@@ -97,9 +105,16 @@ function App() {
             visor={count} 
             arrlength={Verbos.length} 
             completado={countVisor} 
-            icon={<FontAwesomeIcon icon={faEye} />} 
+            icon={iconEye} 
       />
-      <h1 id="titulo">Traduzca {Verbos.length} {Verbos == VerbosM || Verbos == VerbosM2 ? "verbos" : "palabras"} de Ingles a Español</h1>                            
+      <h1 id="titulo">Traduzca 
+                      {" " + Verbos.length} 
+                      {Verbos == VerbosM  
+                      || Verbos == VerbosM2 
+                      ? " verbos " 
+                      : " palabras "} 
+                      de Ingles a Español
+      </h1>                            
       <Main 
             input={input} 
             handleClick={handleClick} 
@@ -109,6 +124,7 @@ function App() {
             boolean={boolean} 
             gameState={gameState} 
             icon={iconEye} 
+            inputBoolean={inputBoolean}
       />
       <Dificulty 
             handleDif={handleDif}
