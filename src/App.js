@@ -28,6 +28,7 @@ function App() {
   let iconEye = <FontAwesomeIcon icon={faEye}/>
 
 
+
   // Logica del Juego
   function handleChange(e) {
     if (e.key == "Enter") {
@@ -114,7 +115,7 @@ function App() {
                       ? " verbos " 
                       : " palabras "} 
                       de Ingles a Español
-      </h1>                            
+      </h1>                          
       <Main 
             input={input} 
             handleClick={handleClick} 
