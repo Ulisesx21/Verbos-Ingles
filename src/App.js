@@ -3,9 +3,12 @@ import { useState } from 'react';
 import Visor from './components/Visor';
 import Main from "./components/Main";
 import VerbosE from './components/Verbos/VerbosE';
-import VerbosM from "./components/Verbos/VerbosM";
+import VerbosM from "./components/Verbos/VerbosM1.1";
+import VerbosM2 from './components/Verbos/VerbosM1.2';
+import VerbosM11 from "./components/Verbos/VerbosM2.1";
+import VerbosM12 from "./components/Verbos/VerbosM2.2";
+import VerbosM13 from "./components/Verbos/VerbosM2.3";
 import VerbosH from './components/Verbos/VerbosH';
-import VerbosM2 from './components/Verbos/VerbosM2';
 import Dificulty from './components/Dificulty';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
@@ -73,12 +76,24 @@ function App() {
       setVerbos(VerbosE)
       reset()
     }
-    if(e.target.value === "mediumI.I"){
+    if(e.target.value === "m I.I"){
       setVerbos(VerbosM)
       reset()
     }
-    if(e.target.value === "mediumI.II"){
+    if(e.target.value === "m I.II"){
       setVerbos(VerbosM2)
+      reset()
+    }
+    if(e.target.value === "m II.I"){
+      setVerbos(VerbosM11)
+      reset()
+    }
+    if(e.target.value === "m II.II"){
+      setVerbos(VerbosM12)
+      reset()
+    }
+    if(e.target.value === "m II.III"){
+      setVerbos(VerbosM13)
       reset()
     }
     if(e.target.value === "hard"){
@@ -111,10 +126,14 @@ function App() {
       <h1 id="titulo">Traduzca 
                       {" " + Verbos.length} 
                       {Verbos == VerbosM  
-                      || Verbos == VerbosM2 
-                      ? " verbos " 
-                      : " palabras "} 
-                      de Ingles a Español
+                        || Verbos == VerbosM2 
+                        ? " Verbos " 
+                        : Verbos == VerbosM11
+                          || Verbos == VerbosM12
+                          || Verbos == VerbosM13 
+                          ? " Adjetivos " 
+                          :" Palabras "} 
+                          de Ingles a Español
       </h1>                          
       <Main 
             input={input} 
