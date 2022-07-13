@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;
   font-family: 'Roboto', sans-serif;
-  letter-spacing: 1.1px;
+  letter-spacing: 0.5px;
   font-weight: 400;
   box-sizing: border-box;
 }
@@ -132,6 +132,10 @@ body {
   border-radius: 10px;
 }
 
+.showicon {
+  font-size: 18px;
+}
+
 .show:hover{
   cursor: pointer;
 }
@@ -171,7 +175,7 @@ body {
 }
 
 .dificulty select{
-  width: 110px;
+  width: 10y0px;
   height: 32px;
   font-size: 15px;
   padding: 1px;

@@ -2,13 +2,13 @@ import './App.css';
 import { useState } from 'react';
 import Visor from './components/Visor';
 import Main from "./components/Main";
-import VerbosE from './components/Verbos/VerbosE';
-import VerbosM from "./components/Verbos/VerbosM1.1";
-import VerbosM2 from './components/Verbos/VerbosM1.2';
-import VerbosM11 from "./components/Verbos/VerbosM2.1";
-import VerbosM12 from "./components/Verbos/VerbosM2.2";
-import VerbosM13 from "./components/Verbos/VerbosM2.3";
-import VerbosH from './components/Verbos/VerbosH';
+import VerbosE from './components/Words/VerbosE';
+import Verb1 from "./components/Words/Verb-1";
+import Verb2 from './components/Words/Verb-2';
+import Adj1 from "./components/Words/Adj-1";
+import Adj2 from "./components/Words/Adj-2";
+import Adj3 from "./components/Words/Adj-3";
+import VerbosH from './components/Words/VerbosH';
 import Dificulty from './components/Dificulty';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
@@ -76,24 +76,24 @@ function App() {
       setVerbos(VerbosE)
       reset()
     }
-    if(e.target.value === "m I.I"){
-      setVerbos(VerbosM)
+    if(e.target.value === "v I"){
+      setVerbos(Verb1)
       reset()
     }
-    if(e.target.value === "m I.II"){
-      setVerbos(VerbosM2)
+    if(e.target.value === "v II"){
+      setVerbos(Verb2)
       reset()
     }
-    if(e.target.value === "m II.I"){
-      setVerbos(VerbosM11)
+    if(e.target.value === "a I"){
+      setVerbos(Adj1)
       reset()
     }
-    if(e.target.value === "m II.II"){
-      setVerbos(VerbosM12)
+    if(e.target.value === "a II"){
+      setVerbos(Adj2)
       reset()
     }
-    if(e.target.value === "m II.III"){
-      setVerbos(VerbosM13)
+    if(e.target.value === "a III"){
+      setVerbos(Adj3)
       reset()
     }
     if(e.target.value === "hard"){
@@ -125,12 +125,12 @@ function App() {
       />
       <h1 id="titulo">Traduzca 
                       {" " + Verbos.length} 
-                      {Verbos == VerbosM  
-                        || Verbos == VerbosM2 
+                      {Verbos == Verb1  
+                        || Verbos == Verb2
                         ? " Verbos " 
-                        : Verbos == VerbosM11
-                          || Verbos == VerbosM12
-                          || Verbos == VerbosM13 
+                        : Verbos == Adj1
+                          || Verbos == Adj2
+                          || Verbos == Adj3 
                           ? " Adjetivos " 
                           :" Palabras "} 
                           de Ingles a Español

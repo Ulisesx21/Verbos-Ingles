@@ -1,4 +1,4 @@
-let VerbosM2 = [{verbo: "leave",respuesta: ["dejar","salir"]},
+const Verb2 = [{verbo: "leave",respuesta: ["dejar","salir"]},
                 {verbo: "listen",respuesta: ["escuchar"]},
                 {verbo: "live",respuesta: ["vivir"]},
                 {verbo: "look",respuesta: ["mirar"]},
@@ -50,4 +50,4 @@ let VerbosM2 = [{verbo: "leave",respuesta: ["dejar","salir"]},
                 {verbo: "write",respuesta: ["escribir"]},]
 
 
-                export default VerbosM2;
+                export default Verb2;

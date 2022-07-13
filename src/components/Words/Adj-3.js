@@ -1,6 +1,4 @@
-
-
-const VerbosM13 = [
+const Adj3 = [
                     {verbo: "rude",respuesta: ["maleducado","grosero","tosco"]},
                     {verbo: "sad",respuesta: ["triste","lamentable","penoso"]},
                     {verbo: "safe",respuesta: ["seguro"]},
@@ -56,4 +54,4 @@ const VerbosM13 = [
 
 
 
-export default VerbosM13;
+export default Adj3;

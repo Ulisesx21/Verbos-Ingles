@@ -1,4 +1,4 @@
-let VerbosM = [{verbo: "accept",respuesta: ["aceptar"]},
+const Verb1 = [{verbo: "accept",respuesta: ["aceptar"]},
                 {verbo: "ask",respuesta: ["preguntar"]},
                 {verbo: "be",respuesta: ["ser","estar"]},
                 {verbo: "begin",respuesta: ["empezar","comenzar"]},
@@ -50,4 +50,4 @@ let VerbosM = [{verbo: "accept",respuesta: ["aceptar"]},
                 {verbo: "learn",respuesta: ["aprender"]},
             ]      
 
-export default VerbosM;
+export default Verb1;

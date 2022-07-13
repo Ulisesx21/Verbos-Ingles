@@ -1,4 +1,4 @@
-const VerbosM11 = [
+const Adj1 = [
                     {verbo: "angry",respuesta: ["enfadado","enojado"]},
                     {verbo: "bad",respuesta: ["malo"]},
                     {verbo: "big",respuesta: ["grande"]},
@@ -52,4 +52,4 @@ const VerbosM11 = [
                 ]
 
 
-export default VerbosM11;
+export default Adj1;

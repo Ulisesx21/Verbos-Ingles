@@ -1,4 +1,4 @@
-let VerbosE = [{verbo: "dog",respuesta: ["perro"]},
+const VerbosE = [{verbo: "dog",respuesta: ["perro"]},
                 {verbo: "cat",respuesta: ["gato"]},
                 {verbo: "mouse",respuesta: ["raton"]},
                 {verbo: "pig",respuesta: ["cerdo","chancho"]},

@@ -1,6 +1,6 @@
 
 
-const VerbosM12 = [
+const Adj2 = [
                     {verbo: "good",respuesta: ["bueno"]},
                     {verbo: "grand",respuesta: ["grandioso","ambicioso"]},
                     {verbo: "greasy",respuesta: ["grasiento"]},
@@ -29,7 +29,7 @@ const VerbosM12 = [
                     {verbo: "mad",respuesta: ["enfadado","enojado","loco"]},
                     {verbo: "mean",respuesta: ["malo","mezquino","tacaño"]},
                     {verbo: "messy",respuesta: ["sucio","desordenado","desastroso"]},
-                    {verbo: "nasty",respuesta: ["repugnante","desagradable"]},
+                    {verbo: "nasty",respuesta: ["desagradable"]},
                     {verbo: "naughty",respuesta: ["malo","travieso","picaro"]},
                     {verbo: "near",respuesta: ["cercano","proximo"]},
                     {verbo: "neat",respuesta: ["ordenado","aseado","pulcro"]},
@@ -55,4 +55,4 @@ const VerbosM12 = [
     
 ]
 
-export default VerbosM12;
+export default Adj2;
