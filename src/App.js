@@ -2,13 +2,13 @@ import './App.css';
 import { useState } from 'react';
 import Visor from './components/Visor';
 import Main from "./components/Main";
-import VerbosE from './components/Words/VerbosE';
+import WordsE from './components/Words/VerbosE';
 import Verb1 from "./components/Words/Verb-1";
 import Verb2 from './components/Words/Verb-2';
 import Adj1 from "./components/Words/Adj-1";
 import Adj2 from "./components/Words/Adj-2";
 import Adj3 from "./components/Words/Adj-3";
-import VerbosH from './components/Words/VerbosH';
+import WordsH from './components/Words/VerbosH';
 import Dificulty from './components/Dificulty';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
@@ -20,12 +20,18 @@ function App() {
   let [input, setInput] = useState("")
   let [state, setState] = useState(0)
   let [count, setCount] = useState(0)
-  let [Verbos, setVerbos] = useState(VerbosE)
+  let [Words, setWords] = useState(WordsE)
   let [countVisor, setCountVisor] = useState(0)
   let [boolean, setBoolean] = useState(false)
   let [inputBoolean, setInputBoolean] = useState(false)
   let [counterState, setCounterState] = useState(true)
   let [gameState, setGameState] = useState(true)
+
+  let [animation, setAnimation] = useState(false)
+  let [animRed, setAnimRed] = useState(false)
+  let [animBlue, setAnimBlue] = useState(false)
+  let [animOrange, setAnimOrange] = useState(false)
+  let [animYellow, setAnimYellow] = useState(false)
 
 
   let iconEye = <FontAwesomeIcon icon={faEye}/>
@@ -36,8 +42,8 @@ function App() {
   function handleChange(e) {
     if (e.key == "Enter") {
       if (gameState) {
-        if (Verbos[state].respuesta.includes(e.target.value.toLowerCase())) {
-          if (state >= Verbos.length - 1) {
+        if (Words[state].respuesta.includes(e.target.value.toLowerCase())) {
+          if (state >= Words.length - 1) {
             setInput("Finalizado")
             e.target.value = ""
             setCountVisor(countVisor + 1)
@@ -49,10 +55,22 @@ function App() {
             setInput("")
             setBoolean(false)
             setCounterState(true)
+            setAnimation(true)
+            setAnimBlue(true)
+            setTimeout(()=>{
+            setAnimation(false)
+            setAnimBlue(false)
+            },800)
             e.target.value = ""
           }
         } else {
-          setInput("INCORRECTO")
+          setAnimRed(true)
+          setTimeout(()=>{
+          setInput("")
+          },830)
+          setTimeout(()=>{
+          setAnimRed(false)
+          },1000)
           e.target.value = ""
         }
       }
@@ -63,6 +81,10 @@ function App() {
   function handleClick(e) {
     if (gameState) {
       setBoolean(!boolean)
+      setAnimOrange(true)
+      setTimeout(()=>{
+        setAnimOrange(false)
+      },1000)
       if (counterState) {
         setCounterState(!counterState)
         setCount(count + 1)
@@ -73,32 +95,40 @@ function App() {
   // Cambio de Dificultad
   function handleDif(e){
     if(e.target.value === "easy"){
-      setVerbos(VerbosE)
+      setWords(WordsE)
       reset()
+      animYel()
+
     }
     if(e.target.value === "v I"){
-      setVerbos(Verb1)
+      setWords(Verb1)
       reset()
+      animYel()
     }
     if(e.target.value === "v II"){
-      setVerbos(Verb2)
+      setWords(Verb2)
       reset()
+      animYel()
     }
     if(e.target.value === "a I"){
-      setVerbos(Adj1)
+      setWords(Adj1)
       reset()
+      animYel()
     }
     if(e.target.value === "a II"){
-      setVerbos(Adj2)
+      setWords(Adj2)
       reset()
+      animYel()
     }
     if(e.target.value === "a III"){
-      setVerbos(Adj3)
+      setWords(Adj3)
       reset()
+      animYel()
     }
     if(e.target.value === "hard"){
-      setVerbos(VerbosH)
+      setWords(WordsH)
       reset()
+      animYel()
     }
   }
 
@@ -114,41 +144,60 @@ function App() {
     setInputBoolean(false)
 }
 
+  // animacion amarillo
+function animYel(){
+  setAnimYellow(true)
+  setTimeout(()=>{
+      setAnimYellow(false)
+    },1000)
+}
+
   
   return (
     <div className="App">
+
       <Visor 
             visor={count} 
-            arrlength={Verbos.length} 
+            arrlength={Words.length} 
             completado={countVisor} 
             icon={iconEye} 
       />
-      <h1 id="titulo">Traduzca 
-                      {" " + Verbos.length} 
-                      {Verbos == Verb1  
-                        || Verbos == Verb2
-                        ? " Verbos " 
-                        : Verbos == Adj1
-                          || Verbos == Adj2
-                          || Verbos == Adj3 
-                          ? " Adjetivos " 
-                          :" Palabras "} 
-                          de Ingles a Español
-      </h1>                          
+
+      <h1 className='titulo'>
+            Traduzca 
+            {" " + Words.length} 
+            {    Words == Verb1  
+              || Words == Verb2
+              ? " Verbos " 
+              :    Words == Adj1
+                || Words == Adj2
+                || Words == Adj3 
+                  ? " Adjetivos " 
+                  : " Palabras "} 
+                  de Ingles a Español
+      </h1>   
+
       <Main 
             input={input} 
             handleClick={handleClick} 
             handleChange={handleChange} 
-            Verbos={Verbos} 
+            Verbos={Words} 
             count={state} 
             boolean={boolean} 
             gameState={gameState} 
             icon={iconEye} 
             inputBoolean={inputBoolean}
+            anim={animation}
+            anim2={animRed}
+            anim3={animBlue}
+            anim4={animOrange}
+            anim5={animYellow}
       />
+
       <Dificulty 
             handleDif={handleDif}
       />
+
     </div>
   );
 }

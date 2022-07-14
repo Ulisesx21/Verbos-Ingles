@@ -72,7 +72,7 @@ body {
   text-align: center;
 }
 
-#titulo {
+.titulo {
   font-size: 2.2em;
   margin: 100px;
   margin-top: calc(100px - 17.4px);
@@ -94,14 +94,104 @@ body {
   border-radius: 10px;
   border: 1px solid black;
   background: url("./universe.jpg");
-  box-shadow: 5px 5px 8px black,-5px -5px 8px black;
+  border: 5px solid rgba(105, 105, 105, 0.486);
+  box-sizing: content-box;
 }
 
 .container h1 {
   font-size: 2.55em;
   margin: 20px;
-  color: white;
+  color: rgb(255, 255, 255);
   text-shadow: 1.6px 1.6px 6px black, -1.6px -1.6px 6px black, 1.6px 1.6px 6px black, -1.6px -1.6px 6px black;
+  
+}
+
+.anim {
+  animation-name: rainbow;
+  animation-duration: 0.8s;
+  animation-iteration-count: 1;
+}
+
+@keyframes rainbow {
+  0% {
+  transform: scale(0);
+
+    }
+  100% {
+  transform: scale(1);
+    }
+}
+
+.anim2 {
+  animation-name: anim2;
+  animation-duration: 1s;
+  animation-iteration-count: 2;
+}
+
+@keyframes anim2 {
+  0% {
+    border: 5px solid rgba(105, 105, 105, 0.486);
+    }
+  50% {
+    border: 5px solid rgb(212, 50, 50);
+    }
+  100% {
+    border: 5px solid rgba(105, 105, 105, 0.486);
+    }
+}
+
+.anim3 {
+  animation-name: anim3;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes anim3 {
+  0% {
+    border: 5px solid rgba(105, 105, 105, 0.486);
+    }
+  50% {
+    border: 5px solid rgba(32, 161, 212, 0.651);
+    }
+  100% {
+    border: 5px solid rgba(105, 105, 105, 0.486);
+    }
+}
+
+.anim4 {
+  animation-name: anim4;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes anim4 {
+  0% {
+    border: 5px solid rgba(105, 105, 105, 0.486);
+    }
+  50% {
+    border: 5px solid rgba(212, 32, 197, 0.637);
+    }
+  100% {
+    border: 5px solid rgba(105, 105, 105, 0.486);
+    }
+}
+
+.anim5 {
+  animation-name: anim5;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes anim5 {
+  0% {
+    border: 5px solid rgba(105, 105, 105, 0.486);
+    }
+  50% {
+    border: 5px solid rgba(212, 185, 32, 0.753);
+    }
+  100% {
+    border: 5px solid rgba(105, 105, 105, 0.486);
+    }
 }
 
 .container h2 {
@@ -133,6 +223,9 @@ body {
 }
 
 .showicon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 18px;
 }
 
@@ -151,6 +244,8 @@ body {
 .incorrecto {
   color: white;
   margin: 20px;
+  font-size: 22px;
+  letter-spacing: 1px;
 }
 
 .img {
@@ -170,12 +265,11 @@ body {
 }
 
 .dificulty h3{
-  margin-right: 15px;
-  font-size: 1.6em;
+  margin-right: 10px;
+  font-size: 1.5em;
 }
 
 .dificulty select{
-  width: 10y0px;
   height: 32px;
   font-size: 15px;
   padding: 1px;
@@ -200,13 +294,14 @@ body {
 
   .container {
     width: 90vw;
-    height: 278px;
+    height: 280px;
     margin-top: 18px;
     box-shadow: none;
+    border: 3px solid rgba(105, 105, 105, 0.486);
   }
 
   .container h1{
-    font-size: 2.45em;
+    font-size: 2.42em;
   }
 
   .visor-container{
@@ -214,7 +309,7 @@ body {
   }
 
   .porcentaje{
-    font-size: 2em;
+    font-size: 1.8em;
   }
 
   .p{
@@ -222,16 +317,71 @@ body {
   }
 
   .visto{
-    font-size: 2em;
+    font-size: 1.8em;
   }
 
-  #titulo {
+  .titulo {
     display:none;
   }
 
   .incorrecto {
     margin: 20px;
-    font-size: 22px;
+  }
+  
+  @keyframes anim2 {
+    0% {
+      border: 3px solid rgba(105, 105, 105, 0.486);
+      }
+    50% {
+      border: 3px solid rgb(212, 50, 50);
+      }
+    100% {
+      border: 3px solid rgba(105, 105, 105, 0.486);
+      }
+  }
+
+  @keyframes anim3 {
+    0% {
+      border: 3px solid rgba(105, 105, 105, 0.486);
+      }
+    50% {
+      border: 3px solid rgba(32, 161, 212, 0.651);
+      }
+    100% {
+      border: 3px solid rgba(105, 105, 105, 0.486);
+      }
+  }
+
+  @keyframes anim4 {
+    0% {
+      border: 3px solid rgba(105, 105, 105, 0.486);
+      }
+    50% {
+      border: 3px solid rgba(212, 32, 197, 0.637);
+      }
+    100% {
+      border: 3px solid rgba(105, 105, 105, 0.486);
+      }
+  }
+
+  @keyframes anim5 {
+    0% {
+      border: 3px solid rgba(105, 105, 105, 0.486);
+      }
+    50% {
+      border: 3px solid rgba(212, 185, 32, 0.753);
+      }
+    100% {
+      border: 3px solid rgba(105, 105, 105, 0.486);
+      }
+  }
+
+  .show {
+    font-size: 17px;
+  }
+
+  .showicon {
+    font-size: 17px;
   }
 
   .dificulty{
