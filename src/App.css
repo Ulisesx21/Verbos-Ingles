@@ -94,7 +94,7 @@ body {
   border-radius: 10px;
   border: 1px solid black;
   background: url("./universe.jpg");
-  border: 5px solid rgba(105, 105, 105, 0.486);
+  border: 6px solid rgba(105, 105, 105, 0.486);
   box-sizing: content-box;
 }
 
@@ -130,13 +130,13 @@ body {
 
 @keyframes anim2 {
   0% {
-    border: 5px solid rgba(105, 105, 105, 0.486);
+    border: 6px solid rgba(105, 105, 105, 0.486);
     }
   50% {
-    border: 5px solid rgb(212, 50, 50);
+    border: 6px solid rgba(253, 40, 40, 0.75);
     }
   100% {
-    border: 5px solid rgba(105, 105, 105, 0.486);
+    border: 6px solid rgba(105, 105, 105, 0.486);
     }
 }
 
@@ -148,13 +148,13 @@ body {
 
 @keyframes anim3 {
   0% {
-    border: 5px solid rgba(105, 105, 105, 0.486);
+    border: 6px solid rgba(105, 105, 105, 0.486);
     }
   50% {
-    border: 5px solid rgba(32, 161, 212, 0.651);
+    border: 6px solid rgba(32, 161, 212, 0.75);
     }
   100% {
-    border: 5px solid rgba(105, 105, 105, 0.486);
+    border: 6px solid rgba(105, 105, 105, 0.486);
     }
 }
 
@@ -166,13 +166,13 @@ body {
 
 @keyframes anim4 {
   0% {
-    border: 5px solid rgba(105, 105, 105, 0.486);
+    border: 6px solid rgba(105, 105, 105, 0.486);
     }
   50% {
-    border: 5px solid rgba(212, 32, 197, 0.637);
+    border: 6px solid rgba(212, 32, 197, 0.75);
     }
   100% {
-    border: 5px solid rgba(105, 105, 105, 0.486);
+    border: 6px solid rgba(105, 105, 105, 0.486);
     }
 }
 
@@ -184,13 +184,31 @@ body {
 
 @keyframes anim5 {
   0% {
-    border: 5px solid rgba(105, 105, 105, 0.486);
+    border: 6px solid rgba(105, 105, 105, 0.486);
     }
   50% {
-    border: 5px solid rgba(212, 185, 32, 0.753);
+    border: 6px solid rgba(255, 222, 34, 0.75);
     }
   100% {
-    border: 5px solid rgba(105, 105, 105, 0.486);
+    border: 6px solid rgba(105, 105, 105, 0.486);
+    }
+}
+
+.anim6 {
+  animation-name: anim6;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes anim6 {
+  0% {
+    border: 6px solid rgba(105, 105, 105, 0.486);
+    }
+  50% {
+    border: 6px solid rgba(255, 159, 34, 0.75);
+    }
+  100% {
+    border: 6px solid rgba(105, 105, 105, 0.486);
     }
 }
 
@@ -257,7 +275,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 120px;
+  margin-top: 30px;
   padding: 10px;
   background: rgb(240, 240, 240);
   box-shadow: 3px 3px 3px black;
@@ -273,6 +291,34 @@ body {
   height: 32px;
   font-size: 15px;
   padding: 1px;
+}
+
+.Desde{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: rgb(240, 240, 240);
+  box-shadow: 3px 3px 3px black;
+  border-radius: 10px;
+  margin-top: 80px
+}
+
+.Desde h3{
+  font-size: 1.5em;
+  text-align: center;
+  padding-right: 10px;
+}
+
+.Desde input{
+  height: 33px;
+  width: 111px;
+  border: 1px solid black;
+  padding: 5px;
+  font-size: 16.5px;
+  outline: none;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
 }
 
 
@@ -297,7 +343,7 @@ body {
     height: 280px;
     margin-top: 18px;
     box-shadow: none;
-    border: 3px solid rgba(105, 105, 105, 0.486);
+    border: 4px solid rgba(105, 105, 105, 0.486);
   }
 
   .container h1{
@@ -330,49 +376,49 @@ body {
   
   @keyframes anim2 {
     0% {
-      border: 3px solid rgba(105, 105, 105, 0.486);
+      border: 4px solid rgba(105, 105, 105, 0.486);
       }
     50% {
-      border: 3px solid rgb(212, 50, 50);
+      border: 4px solid rgba(253, 40, 40, 0.76);
       }
     100% {
-      border: 3px solid rgba(105, 105, 105, 0.486);
+      border: 4px solid rgba(105, 105, 105, 0.486);
       }
   }
 
   @keyframes anim3 {
     0% {
-      border: 3px solid rgba(105, 105, 105, 0.486);
+      border: 4px solid rgba(105, 105, 105, 0.486);
       }
     50% {
-      border: 3px solid rgba(32, 161, 212, 0.651);
+      border: 4px solid rgba(32, 161, 212, 0.822);
       }
     100% {
-      border: 3px solid rgba(105, 105, 105, 0.486);
+      border: 4px solid rgba(105, 105, 105, 0.486);
       }
   }
 
   @keyframes anim4 {
     0% {
-      border: 3px solid rgba(105, 105, 105, 0.486);
+      border: 4px solid rgba(105, 105, 105, 0.486);
       }
     50% {
-      border: 3px solid rgba(212, 32, 197, 0.637);
+      border: 4px solid rgba(212, 32, 197, 0.712);
       }
     100% {
-      border: 3px solid rgba(105, 105, 105, 0.486);
+      border: 4px solid rgba(105, 105, 105, 0.486);
       }
   }
 
   @keyframes anim5 {
     0% {
-      border: 3px solid rgba(105, 105, 105, 0.486);
+      border: 4px solid rgba(105, 105, 105, 0.486);
       }
     50% {
-      border: 3px solid rgba(212, 185, 32, 0.753);
+      border: 4px solid rgba(255, 222, 34, 0.76);
       }
     100% {
-      border: 3px solid rgba(105, 105, 105, 0.486);
+      border: 4px solid rgba(105, 105, 105, 0.486);
       }
   }
 

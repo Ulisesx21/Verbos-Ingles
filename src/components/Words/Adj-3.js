@@ -27,7 +27,7 @@ const Adj3 = [
                     {verbo: "spicy",respuesta: ["picante","especiado","sazonado"]},
                     {verbo: "stingly",respuesta: ["tacaño","racano","raquitico"]},
                     {verbo: "strange",respuesta: ["raro","extraño","desconocido"]},
-                    {verbo: "strict",respuesta: ["esctricto","rigido"]},
+                    {verbo: "strict",respuesta: ["estricto","rigido"]},
                     {verbo: "strong",respuesta: ["fuerte","solido","intenso","marcado"]},
                     {verbo: "sunny",respuesta: ["soleado","radiante"]},
                     {verbo: "sweaty",respuesta: ["sudoroso"]},

@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Visor from './components/Visor';
 import Main from "./components/Main";
 import WordsE from './components/Words/VerbosE';
@@ -10,6 +10,7 @@ import Adj2 from "./components/Words/Adj-2";
 import Adj3 from "./components/Words/Adj-3";
 import WordsH from './components/Words/VerbosH';
 import Dificulty from './components/Dificulty';
+import Desde from './components/Desde';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 
@@ -20,23 +21,67 @@ function App() {
   let [input, setInput] = useState("")
   let [state, setState] = useState(0)
   let [count, setCount] = useState(0)
-  let [Words, setWords] = useState(WordsE)
   let [countVisor, setCountVisor] = useState(0)
+  let [Words, setWords] = useState([{verbo: "",respuesta: []}])
+
+  // Booleans
   let [boolean, setBoolean] = useState(false)
   let [inputBoolean, setInputBoolean] = useState(false)
   let [counterState, setCounterState] = useState(true)
   let [gameState, setGameState] = useState(true)
 
+  // Animation Booleans
   let [animation, setAnimation] = useState(false)
   let [animRed, setAnimRed] = useState(false)
   let [animBlue, setAnimBlue] = useState(false)
-  let [animOrange, setAnimOrange] = useState(false)
+  let [animViolet, setAnimViolet] = useState(false)
   let [animYellow, setAnimYellow] = useState(false)
+  let [animOrange, setAnimOrange] = useState(false)
 
+  // Select Booleans
+  let [hardBool, setHardBool] = useState(false)
+  let [easyBool, setEasyBool] = useState(false)
+  let [Verb1Bool, setVerb1Bool] = useState(false)
+  let [Verb2Bool, setVerb2Bool] = useState(false)
+  let [Adj1Bool, setAdj1Bool] = useState(false)
+  let [Adj2Bool, setAdj2Bool] = useState(false)
+  let [Adj3Bool, setAdj3Bool] = useState(false)
 
   let iconEye = <FontAwesomeIcon icon={faEye}/>
 
-
+  // Inicializando partida con LocalStorage
+  useEffect(()=>{
+    if(localStorage.getItem("verbos") == "hard"){
+      setWords(WordsH)
+      setHardBool(true)
+    }
+    if(localStorage.getItem("verbos") == "v I"){
+      setWords(Verb1)
+      setVerb1Bool(true)
+    }
+    if(localStorage.getItem("verbos") == "v II"){
+      setWords(Verb2)
+      setVerb2Bool(true)
+    }
+    if(localStorage.getItem("verbos") == "a I"){
+      setWords(Adj1)
+      setAdj1Bool(true)
+    }
+    if(localStorage.getItem("verbos") == "a II"){
+      setWords(Adj2)
+      setAdj2Bool(true)
+    }
+    if(localStorage.getItem("verbos") == "a III"){
+      setWords(Adj3)
+      setAdj3Bool(true)
+    }
+    if(localStorage.getItem("verbos") == "easy"){
+      setWords(WordsE)
+      setEasyBool(true)
+    }
+    setState(Number(localStorage.getItem("state")))
+    setInput(Number(localStorage.getItem("state"))+1)
+  },[])
 
   // Logica del Juego
   function handleChange(e) {
@@ -44,7 +89,6 @@ function App() {
       if (gameState) {
         if (Words[state].respuesta.includes(e.target.value.toLowerCase())) {
           if (state >= Words.length - 1) {
-            setInput("Finalizado")
             e.target.value = ""
             setCountVisor(countVisor + 1)
             setGameState(false)
@@ -52,9 +96,10 @@ function App() {
           } else {
             setState(state + 1)
             setCountVisor(countVisor + 1)
-            setInput("")
             setBoolean(false)
             setCounterState(true)
+            localStorage.setItem("state",`${state+1}`)
+            setInput(`${state+2}`)
             setAnimation(true)
             setAnimBlue(true)
             setTimeout(()=>{
@@ -65,9 +110,6 @@ function App() {
           }
         } else {
           setAnimRed(true)
-          setTimeout(()=>{
-          setInput("")
-          },830)
           setTimeout(()=>{
           setAnimRed(false)
           },1000)
@@ -81,9 +123,9 @@ function App() {
   function handleClick(e) {
     if (gameState) {
       setBoolean(!boolean)
-      setAnimOrange(true)
+      setAnimViolet(true)
       setTimeout(()=>{
-        setAnimOrange(false)
+        setAnimViolet(false)
       },1000)
       if (counterState) {
         setCounterState(!counterState)
@@ -92,43 +134,71 @@ function App() {
     }
   }
 
-  // Cambio de Dificultad
+  // Cambio de Dificultad y set de LocalStorage
   function handleDif(e){
     if(e.target.value === "easy"){
       setWords(WordsE)
+      localStorage.setItem("verbos","easy")
+      localStorage.setItem("state","0")
       reset()
       animYel()
-
     }
     if(e.target.value === "v I"){
       setWords(Verb1)
+      localStorage.setItem("verbos","v I")
+      localStorage.setItem("state","0")
       reset()
       animYel()
     }
     if(e.target.value === "v II"){
       setWords(Verb2)
+      localStorage.setItem("verbos","v II")
+      localStorage.setItem("state","0")
       reset()
       animYel()
     }
     if(e.target.value === "a I"){
       setWords(Adj1)
+      localStorage.setItem("verbos","a I")
+      localStorage.setItem("state","0")
       reset()
       animYel()
     }
     if(e.target.value === "a II"){
       setWords(Adj2)
+      localStorage.setItem("verbos","a II")
+      localStorage.setItem("state","0")
       reset()
       animYel()
     }
     if(e.target.value === "a III"){
       setWords(Adj3)
+      localStorage.setItem("verbos","a III")
+      localStorage.setItem("state","0")
       reset()
       animYel()
     }
     if(e.target.value === "hard"){
       setWords(WordsH)
+      localStorage.setItem("verbos","hard")
+      localStorage.setItem("state","0")
       reset()
       animYel()
+    }
+  }
+
+  // Cambio de state/palabra
+  function stateChange(e){
+    if(e.key == "Enter" && Number(e.target.value) > 0 && Number(e.target.value) <= Words.length){
+      setState(Number(e.target.value)-1)
+      setCountVisor(Number(e.target.value)-1)
+      setInput(`${e.target.value}`)
+      localStorage.setItem("state",`${Number(e.target.value)-1}`)
+      e.target.value = ""
+      setAnimOrange(true)
+      setTimeout(()=>{
+        setAnimOrange(false)
+      },1000)
     }
   }
 
@@ -144,8 +214,8 @@ function App() {
     setInputBoolean(false)
 }
 
-  // animacion amarillo
-function animYel(){
+  // Animacion amarillo
+  function animYel(){
   setAnimYellow(true)
   setTimeout(()=>{
       setAnimYellow(false)
@@ -190,12 +260,25 @@ function animYel(){
             anim={animation}
             anim2={animRed}
             anim3={animBlue}
-            anim4={animOrange}
+            anim4={animViolet}
             anim5={animYellow}
+            anim6={animOrange}
+      />
+
+      <Desde 
+            changeState={stateChange}
+            length={Words.length}
       />
 
       <Dificulty 
             handleDif={handleDif}
+            hard={hardBool}
+            easy={easyBool}
+            verb1={Verb1Bool}
+            verb2={Verb2Bool}
+            adj1={Adj1Bool}
+            adj2={Adj2Bool}
+            adj3={Adj3Bool}
       />
 
     </div>
