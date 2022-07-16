@@ -297,6 +297,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: space-around;
   padding: 10px;
   background: rgb(240, 240, 240);
   box-shadow: 3px 3px 3px black;
@@ -312,7 +313,7 @@ body {
 
 .Desde input{
   height: 33px;
-  width: 111px;
+  width: 80px;
   border: 1px solid black;
   padding: 5px;
   font-size: 16.5px;
@@ -422,6 +423,18 @@ body {
       }
   }
 
+  @keyframes anim6 {
+    0% {
+      border: 4px solid rgba(105, 105, 105, 0.486);
+      }
+    50% {
+      border: 4px solid rgba(255, 159, 34, 0.75);
+      }
+    100% {
+      border: 4px solid rgba(105, 105, 105, 0.486);
+      }
+  }
+
   .show {
     font-size: 17px;
   }
@@ -430,8 +443,12 @@ body {
     font-size: 17px;
   }
 
+  .Desde {
+    margin-top: 60px;
+  }
+
   .dificulty{
-    margin-top: 83px;
+    margin-top: 45px;
   }
 
   .dificulty h3{

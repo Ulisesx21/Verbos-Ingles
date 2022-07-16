@@ -9,6 +9,7 @@ import Adj1 from "./components/Words/Adj-1";
 import Adj2 from "./components/Words/Adj-2";
 import Adj3 from "./components/Words/Adj-3";
 import WordsH from './components/Words/VerbosH';
+import Preps from './components/Words/Preps';
 import Dificulty from './components/Dificulty';
 import Desde from './components/Desde';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -55,32 +56,38 @@ function App() {
       setWords(WordsH)
       setHardBool(true)
     }
-    if(localStorage.getItem("verbos") == "v I"){
+    else if(localStorage.getItem("verbos") == "v I"){
       setWords(Verb1)
       setVerb1Bool(true)
     }
-    if(localStorage.getItem("verbos") == "v II"){
+    else if(localStorage.getItem("verbos") == "v II"){
       setWords(Verb2)
       setVerb2Bool(true)
     }
-    if(localStorage.getItem("verbos") == "a I"){
+    else if(localStorage.getItem("verbos") == "a I"){
       setWords(Adj1)
       setAdj1Bool(true)
     }
-    if(localStorage.getItem("verbos") == "a II"){
+    else if(localStorage.getItem("verbos") == "a II"){
       setWords(Adj2)
       setAdj2Bool(true)
     }
-    if(localStorage.getItem("verbos") == "a III"){
+    else if(localStorage.getItem("verbos") == "a III"){
       setWords(Adj3)
       setAdj3Bool(true)
     }
-    if(localStorage.getItem("verbos") == "easy"){
+    else if(localStorage.getItem("verbos") == "easy"){
       setWords(WordsE)
       setEasyBool(true)
     }
+    else{
+      setWords(WordsE)
+    }
     setState(Number(localStorage.getItem("state")))
     setInput(Number(localStorage.getItem("state"))+1)
+    setCountVisor(Number(localStorage.getItem("state")))
+    setCount(Number(localStorage.getItem("count"))+1)
+
   },[])
 
   // Logica del Juego
@@ -130,6 +137,7 @@ function App() {
       if (counterState) {
         setCounterState(!counterState)
         setCount(count + 1)
+        localStorage.setItem("count",`${count}`)
       }
     }
   }
@@ -194,6 +202,7 @@ function App() {
       setCountVisor(Number(e.target.value)-1)
       setInput(`${e.target.value}`)
       localStorage.setItem("state",`${Number(e.target.value)-1}`)
+      localStorage.setItem("count",`${count}`)
       e.target.value = ""
       setAnimOrange(true)
       setTimeout(()=>{

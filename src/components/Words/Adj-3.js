@@ -3,7 +3,7 @@ const Adj3 = [
                     {verbo: "sad",respuesta: ["triste","lamentable","penoso"]},
                     {verbo: "safe",respuesta: ["seguro"]},
                     {verbo: "salty",respuesta: ["salado"]},
-                    {verbo: "sane",respuesta: ["cuerdo","sensato"]},
+                    {verbo: "sane",respuesta: ["cuerdo","sensato","sano"]},
                     {verbo: "scary",respuesta: ["espantoso","asustadizo"]},
                     {verbo: "shallow",respuesta: ["superficial"]},
                     {verbo: "shiny",respuesta: ["brillante","reluciente"]},
