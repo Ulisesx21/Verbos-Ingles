@@ -1,6 +1,6 @@
 const Preps = [
-                        {verbo: "after",respuesta: ["despues de"]},
-                        {verbo: "around",respuesta: ["alrededor de"]},
+                        {verbo: "after",respuesta: ["despues"]},
+                        {verbo: "around",respuesta: ["alrededor"]},
                         {verbo: "at",respuesta: ["en"]},
                         {verbo: "before",respuesta: ["antes"]},
                         {verbo: "between",respuesta: ["entre"]},
@@ -14,18 +14,18 @@ const Preps = [
                         {verbo: "above",respuesta: ["encima"]},
                         {verbo: "against",respuesta: ["contra"]},
                         {verbo: "at",respuesta: ["en"]},
-                        {verbo: "below",respuesta: ["debajo de"]},
+                        {verbo: "below",respuesta: ["debajo"]},
                         {verbo: "beneath",respuesta: ["bajo"]},
-                        {verbo: "beside",respuesta: ["al lado de"]},
+                        {verbo: "beside",respuesta: ["al lado"]},
                         {verbo: "in",respuesta: ["en"]},
                         {verbo: "next to",respuesta: ["proximo a"]},
                         {verbo: "on",respuesta: ["en"]},
                         {verbo: "under",respuesta: ["debajo"]},
-                        {verbo: "across",respuesta: ["a traves de"]},
+                        {verbo: "across",respuesta: ["a traves"]},
                         {verbo: "into",respuesta: ["en"]},
                         {verbo: "onto",respuesta: ["en","sobre"]},
                         {verbo: "over",respuesta: ["encima"]},
-                        {verbo: "through",respuesta: ["a traves de"]},
+                        {verbo: "through",respuesta: ["a traves"]},
     
 ]
 

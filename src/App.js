@@ -90,6 +90,14 @@ function App() {
 
   },[])
 
+  useEffect(()=>{
+    window.addEventListener("keydown",(e)=>{
+      if(e.key === "Control"){
+        handleClick(e)
+      }
+    })
+  },[])
+
   // Logica del Juego
   function handleChange(e) {
     if (e.key == "Enter") {

@@ -27,7 +27,7 @@ let VerbosE = [
                 {verbo: "black",respuesta: ["negro"]},
                 {verbo: "white",respuesta: ["blanco"]},
                 {verbo: "car",respuesta: ["auto"]},
-                {verbo: "bike",respuesta: ["bicicleta"]},
+                {verbo: "bike",respuesta: ["bicicleta","bici"]},
                 {verbo: "door",respuesta: ["puerta"]},
                 {verbo: "window",respuesta: ["ventana"]},
                 {verbo: "chair",respuesta: ["silla"]},

@@ -20,7 +20,7 @@ const Adj2 = [
                     {verbo: "kind",respuesta: ["amable","bueno","bondadoso"]},
                     {verbo: "large",respuesta: ["grande"]},
                     {verbo: "lazy",respuesta: ["perezoso"]},
-                    {verbo: "light",respuesta: ["ligero","claro"]},
+                    {verbo: "light",respuesta: ["ligero","claro","liviano"]},
                     {verbo: "little",respuesta: ["pequeño","poco"]},
                     {verbo: "lonely",respuesta: ["solitario"]},
                     {verbo: "long",respuesta: ["largo"]},

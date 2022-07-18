@@ -21,7 +21,7 @@ const Adj1 = [
                     {verbo: "cold",respuesta: ["frio"]},
                     {verbo: "cool",respuesta: ["fresco"]},
                     {verbo: "crazy",respuesta: ["loco"]},
-                    {verbo: "creepy",respuesta: ["espeluznante","repugnante"]},
+                    {verbo: "creepy",respuesta: ["espeluznante"]},
                     {verbo: "crispy",respuesta: ["crujiente"]},
                     {verbo: "cruel",respuesta: ["cruel"]},
                     {verbo: "crunchy",respuesta: ["crujiente"]},

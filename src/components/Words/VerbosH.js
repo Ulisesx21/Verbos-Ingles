@@ -23,11 +23,7 @@ const VerbosD = [{verbo: "readability",respuesta: ["legibilidad"]},
                 {verbo: "drought",respuesta: ["sequia"]},
                 {verbo: "shortages",respuesta: ["escazes"]},
                 {verbo: "etched",respuesta: ["grabado"]},
-                {verbo: "worldly",respuesta: ["mundano"]},
-                {verbo: "bossy",respuesta: ["mandon"]},
-                {verbo: "sweep",respuesta: ["barrer"]},
-                {verbo: "windy",respuesta: ["ventoso"]}, 
-                {verbo: "bitter",respuesta: ["amargo"]},               
+                {verbo: "sweep",respuesta: ["barrer"]},             
 ]
 
 export default VerbosD;
