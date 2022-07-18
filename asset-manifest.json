@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Verbos-Ingles/static/css/main.8cda2c73.css",
-    "main.js": "/Verbos-Ingles/static/js/main.5acafdd4.js",
+    "main.js": "/Verbos-Ingles/static/js/main.2812d4b1.js",
     "static/media/universe.jpg": "/Verbos-Ingles/static/media/universe.7a9f6ff89f2958829746.jpg",
     "index.html": "/Verbos-Ingles/index.html",
     "main.8cda2c73.css.map": "/Verbos-Ingles/static/css/main.8cda2c73.css.map",
-    "main.5acafdd4.js.map": "/Verbos-Ingles/static/js/main.5acafdd4.js.map"
+    "main.2812d4b1.js.map": "/Verbos-Ingles/static/js/main.2812d4b1.js.map"
   },
   "entrypoints": [
     "static/css/main.8cda2c73.css",
-    "static/js/main.5acafdd4.js"
+    "static/js/main.2812d4b1.js"
   ]
 }
