@@ -338,8 +338,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
   border-radius: 50%;
   background: rgb(240, 240, 240);
   box-shadow: 3px 3px 5px rgb(0, 0, 0);
@@ -451,7 +451,7 @@ body {
   border-radius: 10px;
   right: 0;
   top: 690px;
-  margin-right: 17.8%;
+  margin-right: 25.5%;
   height: 42px;
   padding: 10px;
 }
@@ -498,7 +498,7 @@ body {
   }
 
   .helpDesde {
-    margin-right: 23%;
+    margin-right: 29%;
   }
 
   .helpDif {
@@ -524,7 +524,7 @@ body {
   }
 
   .helpDesde {
-    margin-right: 11%;
+    margin-right: 20%;
   }
 
   .helpDif {
@@ -550,7 +550,7 @@ body {
   }
 
   .helpDesde {
-    margin-right: 15%;
+    margin-right: 23%;
   }
 
   .helpDif {
@@ -590,7 +590,7 @@ body {
   }
 
   .helpDesde {
-    margin-right: 11%;
+    margin-right: 21%;
   }
 
   .helpDif {

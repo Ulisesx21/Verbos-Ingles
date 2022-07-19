@@ -31,7 +31,7 @@ function App() {
   let [inputBoolean, setInputBoolean] = useState(false)
   let [counterState, setCounterState] = useState(true)
   let [gameState, setGameState] = useState(true)
-  let [helpState, setHelpState] = useState(true)
+  let [helpState, setHelpState] = useState(false)
 
   // Animation Booleans
   let [animation, setAnimation] = useState(false)
