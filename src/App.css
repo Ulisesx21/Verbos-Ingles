@@ -343,9 +343,265 @@ body {
   border-radius: 50%;
   background: rgb(240, 240, 240);
   box-shadow: 3px 3px 5px rgb(0, 0, 0);
-  margin-top: 120px;
+  margin-top: 25px;
+  margin-bottom: 10px;
   cursor: pointer;
-  font-size: 23px;
+  font-size: 20px;
+}
+
+.help {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.295);
+}
+
+.visorHelp {
+  background: black;
+}
+
+.helpPorcentaje {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  background: rgb(240, 240, 240);
+  box-shadow: 3px 3px 3px black;
+  border-radius: 10px;
+  height: 45px;
+  width: 330px;
+  margin-left: 11.3%;
+  padding: 10px;
+}
+
+.helpPorcentaje h1{
+  font-size: 1.6em;
+}
+
+.helpVisto {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  background: rgb(240, 240, 240);
+  box-shadow: 3px 3px 3px black;
+  border-radius: 10px;
+  right: 0;
+  margin-right: 17.8%;
+  height: 45px;
+  padding: 10px;
+}
+
+.helpVisto h1{
+  font-size: 1.6em;
+}
+
+.helpInput {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  background: rgb(240, 240, 240);
+  box-shadow: 3px 3px 3px black;
+  border-radius: 10px;
+  right: 0;
+  margin-right: 20%;
+  top: 420px;
+  height: 42px;
+  padding: 10px;
+}
+
+.helpInput h1 {
+  font-size: 1.5em;
+}
+
+.helpVisor {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  background: rgb(240, 240, 240);
+  box-shadow: 3px 3px 3px black;
+  border-radius: 10px;
+  right: 0;
+  margin-right: 17.8%;
+  top: 474px;
+  height: 42px;
+  padding: 10px;
+}
+
+.helpVisor h1 {
+  font-size: 1.5em;
+}
+
+.helpDesde {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  background: rgb(240, 240, 240);
+  box-shadow: 3px 3px 3px black;
+  border-radius: 10px;
+  right: 0;
+  top: 690px;
+  margin-right: 17.8%;
+  height: 42px;
+  padding: 10px;
+}
+
+.helpDesde h1 {
+  font-size: 1.5em;
+}
+
+.helpDif {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  background: rgb(240, 240, 240);
+  box-shadow: 3px 3px 3px black;
+  border-radius: 10px;
+  right: 0;
+  top: 775px;
+  margin-right: 23.65%;
+  height: 42px;
+  padding: 10px;
+}
+
+.helpDif h1 {
+  font-size: 1.5em;
+}
+
+@media (max-width: 1980px) {
+  .helpPorcentaje {
+    margin-left: 16%;
+  }
+
+  .helpVisto {
+    margin-right: 21%;
+  }
+
+  .helpInput {
+    margin-right: 23.8%;
+  }
+
+  .helpVisor {
+    margin-right: 22%;
+  }
+
+  .helpDesde {
+    margin-right: 23%;
+  }
+
+  .helpDif {
+    margin-right: 27%;
+  }
+}
+
+@media (max-width: 1800px) {
+  .helpPorcentaje {
+    margin-left: 3%;
+  }
+
+  .helpVisto {
+    margin-right: 11%;
+  }
+
+  .helpInput {
+    margin-right: 14%;
+  }
+
+  .helpVisor {
+    margin-right: 11%;
+  }
+
+  .helpDesde {
+    margin-right: 11%;
+  }
+
+  .helpDif {
+    margin-right: 18.15%;
+  }
+}
+
+@media (max-width: 1680px) {
+  .helpPorcentaje {
+    margin-left: 10.5%;
+  }
+
+  .helpVisto {
+    margin-right: 17%;
+  }
+
+  .helpInput {
+    margin-right: 17.5%;
+  }
+
+  .helpVisor {
+    margin-right: 15.3%;
+  }
+
+  .helpDesde {
+    margin-right: 15%;
+  }
+
+  .helpDif {
+    margin-right: 21%;
+  }
+}
+
+@media (max-width: 1230px) {
+  .help {
+    display: none;
+  }
+
+  .ayuda {
+    display : none;
+  }
+
+  .Desde {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 1480px) {
+  .helpPorcentaje {
+    margin-left: 3%;
+  }
+
+  .helpVisto {
+    margin-right: 11%;
+  }
+
+  .helpInput {
+    margin-right: 14%;
+  }
+
+  .helpVisor {
+    margin-right: 11%;
+  }
+
+  .helpDesde {
+    margin-right: 11%;
+  }
+
+  .helpDif {
+    margin-right: 18.15%;
+  }
+}
+
+@media (max-width: 1230px) {
+  .help {
+    display: none;
+  }
 }
 
 @media (max-width: 990px) {
@@ -479,6 +735,10 @@ body {
   @media (max-width: 768px) {
     .container {
       width: 90vw;
+    }
+
+    .ayuda {
+      margin-top: 45px;
     }
   }
 

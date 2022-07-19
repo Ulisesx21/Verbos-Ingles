@@ -12,8 +12,9 @@ import WordsH from './components/Words/VerbosH';
 import Preps from './components/Words/Preps';
 import Dificulty from './components/Dificulty';
 import Desde from './components/Desde';
+import Help from './components/Help';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye } from '@fortawesome/free-solid-svg-icons';
+import { faEye, faArrowLeft, faArrowRight, faQuestion } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -23,7 +24,6 @@ function App() {
   let [state, setState] = useState(0)
   let [count, setCount] = useState(0)
   let [countVisor, setCountVisor] = useState(0)
-  let [frasesState, setFrasesState] = useState(0)
   let [Words, setWords] = useState([{verbo: "",respuesta: []}])
 
   // Booleans
@@ -31,7 +31,7 @@ function App() {
   let [inputBoolean, setInputBoolean] = useState(false)
   let [counterState, setCounterState] = useState(true)
   let [gameState, setGameState] = useState(true)
-  let [fraseBool, setFraseBool] = useState(false)
+  let [helpState, setHelpState] = useState(true)
 
   // Animation Booleans
   let [animation, setAnimation] = useState(false)
@@ -52,6 +52,10 @@ function App() {
   let [Adj3Bool, setAdj3Bool] = useState(false)
 
   const iconEye = <FontAwesomeIcon icon={faEye}/>
+  const arrLeft = <FontAwesomeIcon icon={faArrowLeft}/>
+  const arrRight = <FontAwesomeIcon icon={faArrowRight}/>
+  const iconQuestion = <FontAwesomeIcon icon={faQuestion}/>
+
 
 
   // Inicializando partida con LocalStorage
@@ -266,25 +270,22 @@ function App() {
             icon={iconEye} 
       />
 
-      {fraseBool ? <p className='frases'></p> 
-                  : <h1 className='titulo'>
-                  Traduzca 
-                  {" " + Words.length} 
-                  {    Words == Verb1  
-                    || Words == Verb2
-                    ? " Verbos " 
-                    :    Words == Adj1
-                      || Words == Adj2
-                      || Words == Adj3 
-                        ? " Adjetivos " 
-                        : Words == Preps
-                          ? " Preposiciones "
-                          : " Palabras "} 
-                        de Ingles a Español
-                    </h1>
-        }
-         
-
+      <h1 className='titulo'>
+            Traduce 
+            {" " + Words.length} 
+            {    Words == Verb1  
+              || Words == Verb2
+              ? " Verbos " 
+              :    Words == Adj1
+                || Words == Adj2
+                || Words == Adj3 
+                  ? " Adjetivos " 
+                  : Words == Preps
+                    ? " Preposiciones "
+                    : " Palabras "} 
+                    de Ingles a Español
+      </h1>
+      
       <Main 
             input={input} 
             handleClick={handleClick} 
@@ -320,6 +321,9 @@ function App() {
             adj3={Adj3Bool}
       />
 
+      {helpState && <Help left={arrLeft} right={arrRight}/>}
+
+      <div className='ayuda' onClick={()=>setHelpState(!helpState)}>{iconQuestion}</div>
     </div>
   );
 }
