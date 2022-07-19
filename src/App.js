@@ -14,7 +14,7 @@ import Dificulty from './components/Dificulty';
 import Desde from './components/Desde';
 import Help from './components/Help';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faArrowLeft, faArrowRight, faQuestion } from '@fortawesome/free-solid-svg-icons';
+import { faEye, faArrowLeft, faArrowRight, faQuestion, faRe } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -283,8 +283,10 @@ function App() {
                   : Words == Preps
                     ? " Preposiciones "
                     : " Palabras "} 
-                    de Ingles a Español
+                    de Inglés a Español
       </h1>
+
+      <div></div>
       
       <Main 
             input={input} 

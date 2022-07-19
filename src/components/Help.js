@@ -19,7 +19,7 @@ export default function Help(props){
         </div>
         <div>
           <div className='helpDesde'>
-            <h1>{props.left} Numero de Palabra</h1>
+            <h1>{props.left} Número de Palabra</h1>
           </div>
           <div className='helpDif'>
             <h1>{props.left} Seleccione Dificultad</h1>
