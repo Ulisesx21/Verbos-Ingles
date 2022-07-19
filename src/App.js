@@ -23,6 +23,7 @@ function App() {
   let [state, setState] = useState(0)
   let [count, setCount] = useState(0)
   let [countVisor, setCountVisor] = useState(0)
+  let [frasesState, setFrasesState] = useState(0)
   let [Words, setWords] = useState([{verbo: "",respuesta: []}])
 
   // Booleans
@@ -30,6 +31,7 @@ function App() {
   let [inputBoolean, setInputBoolean] = useState(false)
   let [counterState, setCounterState] = useState(true)
   let [gameState, setGameState] = useState(true)
+  let [fraseBool, setFraseBool] = useState(false)
 
   // Animation Booleans
   let [animation, setAnimation] = useState(false)
@@ -44,11 +46,13 @@ function App() {
   let [easyBool, setEasyBool] = useState(false)
   let [Verb1Bool, setVerb1Bool] = useState(false)
   let [Verb2Bool, setVerb2Bool] = useState(false)
+  let [preps, setPreps] = useState(false)
   let [Adj1Bool, setAdj1Bool] = useState(false)
   let [Adj2Bool, setAdj2Bool] = useState(false)
   let [Adj3Bool, setAdj3Bool] = useState(false)
 
-  let iconEye = <FontAwesomeIcon icon={faEye}/>
+  const iconEye = <FontAwesomeIcon icon={faEye}/>
+
 
   // Inicializando partida con LocalStorage
   useEffect(()=>{
@@ -63,6 +67,10 @@ function App() {
     else if(localStorage.getItem("verbos") == "v II"){
       setWords(Verb2)
       setVerb2Bool(true)
+    }
+    else if(localStorage.getItem("verbos") == "prep"){
+      setWords(Preps)
+      setPreps(true)
     }
     else if(localStorage.getItem("verbos") == "a I"){
       setWords(Adj1)
@@ -86,18 +94,18 @@ function App() {
     setState(Number(localStorage.getItem("state")))
     setInput(Number(localStorage.getItem("state"))+1)
     setCountVisor(Number(localStorage.getItem("state")))
-    setCount(Number(localStorage.getItem("count"))+1)
+    setCount(Number(localStorage.getItem("count")))
 
   },[])
 
-  useEffect(()=>{
-    window.addEventListener("keydown",(e)=>{
+  window.addEventListener("keydown",(e)=>{
       if(e.key === "Control"){
-        handleClick(e)
+        setTimeout(()=>{
+          handleClick()
+        })
       }
-    })
-  },[])
-
+  })
+  
   // Logica del Juego
   function handleChange(e) {
     if (e.key == "Enter") {
@@ -135,7 +143,7 @@ function App() {
   }
 
   // Contador de Palabras vistas
-  function handleClick(e) {
+  function handleClick() {
     if (gameState) {
       setBoolean(!boolean)
       setAnimViolet(true)
@@ -145,7 +153,7 @@ function App() {
       if (counterState) {
         setCounterState(!counterState)
         setCount(count + 1)
-        localStorage.setItem("count",`${count}`)
+        localStorage.setItem("count",`${count+1}`)
       }
     }
   }
@@ -169,6 +177,13 @@ function App() {
     if(e.target.value === "v II"){
       setWords(Verb2)
       localStorage.setItem("verbos","v II")
+      localStorage.setItem("state","0")
+      reset()
+      animYel()
+    }
+    if(e.target.value === "prep"){
+      setWords(Preps)
+      localStorage.setItem("verbos","prep")
       localStorage.setItem("state","0")
       reset()
       animYel()
@@ -229,6 +244,7 @@ function App() {
     setCounterState(counterState = true)
     setGameState(true)
     setInputBoolean(false)
+    localStorage.setItem("count","0")
 }
 
   // Animacion amarillo
@@ -250,19 +266,22 @@ function App() {
             icon={iconEye} 
       />
 
-      <h1 className='titulo'>
-            Traduzca 
-            {" " + Words.length} 
-            {    Words == Verb1  
-              || Words == Verb2
-              ? " Verbos " 
-              :    Words == Adj1
-                || Words == Adj2
-                || Words == Adj3 
-                  ? " Adjetivos " 
-                  : " Palabras "} 
-                  de Ingles a Español
-      </h1>   
+      {fraseBool ? <p className='frases'></p> 
+                  : <h1 className='titulo'>
+                  Traduzca 
+                  {" " + Words.length} 
+                  {    Words == Verb1  
+                    || Words == Verb2
+                    ? " Verbos " 
+                    :    Words == Adj1
+                      || Words == Adj2
+                      || Words == Adj3 
+                        ? " Adjetivos " 
+                        : " Palabras "} 
+                        de Ingles a Español
+                    </h1>
+        }
+         
 
       <Main 
             input={input} 
@@ -293,6 +312,7 @@ function App() {
             easy={easyBool}
             verb1={Verb1Bool}
             verb2={Verb2Bool}
+            prep={preps}
             adj1={Adj1Bool}
             adj2={Adj2Bool}
             adj3={Adj3Bool}

@@ -83,6 +83,17 @@ body {
   box-shadow: 3px 3px 3px black;
 }
 
+.frases {
+  font-size: 2.1em;
+  margin: 100px;
+  margin-top: calc(100px - 17.4px);
+  color: rgb(0, 0, 0);
+  background: rgb(240, 240, 240);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 3px 3px 3px black;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -337,7 +348,7 @@ body {
   font-size: 23px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 910px) {
 
   .container {
     width: 90vw;
@@ -368,7 +379,11 @@ body {
   }
 
   .titulo {
-    display:none;
+    display: none;
+  }
+
+  .frases {
+    display: none;
   }
 
   .incorrecto {
