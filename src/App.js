@@ -95,7 +95,6 @@ function App() {
     setInput(Number(localStorage.getItem("state"))+1)
     setCountVisor(Number(localStorage.getItem("state")))
     setCount(Number(localStorage.getItem("count")))
-
   },[])
 
   window.addEventListener("keydown",(e)=>{
@@ -116,6 +115,7 @@ function App() {
             setCountVisor(countVisor + 1)
             setGameState(false)
             setInputBoolean(true)
+            setInput("Finalizado")
           } else {
             setState(state + 1)
             setCountVisor(countVisor + 1)
@@ -239,7 +239,7 @@ function App() {
     setState(state = 0)
     setCountVisor(countVisor = 0)
     setCount(count = 0)
-    setInput("")
+    setInput("1")
     setBoolean(boolean = false)
     setCounterState(counterState = true)
     setGameState(true)
@@ -277,7 +277,9 @@ function App() {
                       || Words == Adj2
                       || Words == Adj3 
                         ? " Adjetivos " 
-                        : " Palabras "} 
+                        : Words == Preps
+                          ? " Preposiciones "
+                          : " Palabras "} 
                         de Ingles a Español
                     </h1>
         }

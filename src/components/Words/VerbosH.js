@@ -23,7 +23,16 @@ const VerbosD = [{verbo: "readability",respuesta: ["legibilidad"]},
                 {verbo: "drought",respuesta: ["sequia"]},
                 {verbo: "shortages",respuesta: ["escazes"]},
                 {verbo: "etched",respuesta: ["grabado"]},
-                {verbo: "sweep",respuesta: ["barrer"]},             
+                {verbo: "sweep",respuesta: ["barrer"]},
+                {verbo: "seeks",respuesta: ["busca"]}, 
+                {verbo: "leisurely",respuesta: ["tranquilo","ralajado","sin prisa"]}, 
+                {verbo: "raving",respuesta: ["delirante"]}, 
+                {verbo: "swamp",respuesta: ["pantano"]}, 
+                {verbo: "plotting",respuesta: ["trazar","tramar","graficado"]}, 
+                {verbo: "prosecute",respuesta: ["procesado"]}, 
+                {verbo: "tauting",respuesta: ["burlandose","burlar"]},
+                {verbo: "rubbed",respuesta: ["frotado","frotar"]},
+                {verbo: "hang",respuesta: ["colgar"]},               
 ]
 
 export default VerbosD;
