@@ -1,8 +1,9 @@
 export default function Dificulty(props){
     return(
       <div className='dificulty'>
-        <h3>Dificultad</h3>
+        <h3>Secciones</h3>
         <select onChange={props.handleDif}>
+          <option value="milista" selected={props.miLista}>Mi Lista</option>
           <option value="hard" selected={props.hard}>Difícil</option>
           <option value="a III" selected={props.adj3}>Adj III</option>
           <option value="a II" selected={props.adj2}>Adj II</option>

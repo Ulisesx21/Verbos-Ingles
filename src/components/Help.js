@@ -17,14 +17,6 @@ export default function Help(props){
             <h1>{props.left} Haga "Click" o presione "Ctrl"</h1>
           </div>
         </div>
-        <div>
-          <div className='helpDesde'>
-            <h1>{props.left} Número de Palabra</h1>
-          </div>
-          <div className='helpDif'>
-            <h1>{props.left} Seleccione Dificultad</h1>
-          </div>
-        </div>
       </div>
     )
 }

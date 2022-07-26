@@ -5,6 +5,7 @@
   letter-spacing: 0.5px;
   font-weight: 400;
   box-sizing: border-box;
+  scrollbar-color: rgb(240, 240, 240) #000000;
 }
 
 body {
@@ -12,7 +13,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: rgb(255, 255, 255);
   background-image: url("https://i.pinimg.com/originals/da/a3/24/daa3245ca585582f2f0baf7d180c6d93.jpg");
   object-fit: cover;
 }
@@ -93,6 +93,121 @@ body {
   padding: 10px;
   box-shadow: 3px 3px 3px black;
 }
+
+.milista {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 15px;
+  top: 250px;
+  width: 20vw;
+  height: 60vh;
+  background: rgb(240, 240, 240);
+  box-shadow: 3px 3px 3px black;
+  border: 2px solid black;
+  border-radius: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.milista h1{
+  margin: 6px;
+}
+
+.form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px 0px;
+  height: 50px;
+  width: 100%;
+}
+
+.form label {
+  margin-top: 0;
+}
+
+.form label span{
+  font-size: 18px;
+}
+
+.form label input{
+  width: 88%;
+  border-radius: 10px;
+  border: 1px solid black;
+  height: 25px;
+  margin-top: 5px;
+  padding: 6px;
+  outline: none;
+  font-size: 15.5px;
+}
+
+.inputV {
+  margin-right: -10px;
+}
+
+.milistabtn {
+  margin-top: 27px;
+  margin-right: 10px;
+  width: 80px;
+  padding: 3px;
+  border-radius: 10px;
+  border: 1px solid rgb(121, 121, 121);
+  font-size: 14px;
+}
+
+.verbolist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 3px 0px;
+  padding: 4px;
+  text-align: left;
+  padding-left: 10px;
+  border-bottom: 1px solid black;
+  font-size: 16.8px;
+}
+
+.divpalabras {
+  height: 100%;
+}
+
+.btnlist {
+  margin-right: 8px;
+  margin-bottom: 2px;
+  border-radius: 3px;
+  padding: 2px;
+  margin-bottom: 3px;
+  border: 1px solid rgb(121, 121, 121);;
+}
+
+.spanlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 200px;
+  left: 20px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: rgb(240, 240, 240);
+  box-shadow: 2px 2px 5px black, -2px -2px 5px black;
+  cursor: pointer;
+}
+
+.milistaS {
+  background: rgb(196, 196, 196);
+}
+
 
 .container {
   display: flex;
@@ -249,6 +364,7 @@ body {
   background: rgb(235, 235, 235);
   font-size: 18px;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .showicon {
@@ -287,7 +403,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 30px;
-  padding: 10px;
+  padding: 8px;
   background: rgb(240, 240, 240);
   box-shadow: 3px 3px 3px black;
   border-radius: 10px;
@@ -304,16 +420,35 @@ body {
   padding: 1px;
 }
 
+.restart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: rgb(240, 240, 240);
+  box-shadow: 1px 1px 5px black, -1px -1px 5px black;
+  cursor: pointer;
+  padding: 10px;
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+.restart:hover {
+  background: rgb(235, 235, 235);
+}
+
 .Desde{
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-around;
-  padding: 10px;
+  padding: 8px;
   background: rgb(240, 240, 240);
   box-shadow: 3px 3px 3px black;
   border-radius: 10px;
-  margin-top: 80px
+  margin-top: 50px;
 }
 
 .Desde h3{
@@ -335,16 +470,17 @@ body {
 
 
 .ayuda{
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 45px;
-  width: 45px;
+  top: 200px;
+  right: 40px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   background: rgb(240, 240, 240);
-  box-shadow: 3px 3px 5px rgb(0, 0, 0);
-  margin-top: 25px;
-  margin-bottom: 10px;
+  box-shadow: 2px 2px 5px black, -2px -2px 5px black;
   cursor: pointer;
   font-size: 20px;
 }
@@ -440,44 +576,31 @@ body {
   font-size: 1.5em;
 }
 
-.helpDesde {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  text-align: center;
-  background: rgb(240, 240, 240);
-  box-shadow: 3px 3px 3px black;
-  border-radius: 10px;
-  right: 0;
-  top: 690px;
-  margin-right: 25.5%;
-  height: 42px;
-  padding: 10px;
-}
+@media (max-height: 801px) {
+  .titulo{
+    margin: 40px;
+  }
 
-.helpDesde h1 {
-  font-size: 1.5em;
-}
+  .Desde{
+    margin-top: 30px;
+  }
 
-.helpDif {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  text-align: center;
-  background: rgb(240, 240, 240);
-  box-shadow: 3px 3px 3px black;
-  border-radius: 10px;
-  right: 0;
-  top: 775px;
-  margin-right: 23.65%;
-  height: 42px;
-  padding: 10px;
-}
+  .restart {
+    margin-top: 30px;
+  }
 
-.helpDif h1 {
-  font-size: 1.5em;
+  .dificulty{
+    margin-top: 30px;
+  }
+
+  .helpInput {
+    right: 0;
+    top: 320px;
+  }
+
+  .helpVisor {
+    top: 370px;
+  }
 }
 
 @media (max-width: 1980px) {
@@ -564,11 +687,19 @@ body {
   }
 
   .ayuda {
-    display : none;
+    display: none;
+  }
+
+  .milista {
+    display: none;
+  }
+
+  .add {
+    display: none;
   }
 
   .Desde {
-    margin-top: 40px;
+    margin-top: 30px;
   }
 }
 
@@ -741,5 +872,7 @@ body {
       margin-top: 45px;
     }
   }
+
+  
 
 }
