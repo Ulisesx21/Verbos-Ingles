@@ -13,7 +13,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url("https://i.pinimg.com/originals/da/a3/24/daa3245ca585582f2f0baf7d180c6d93.jpg");
+  background-image: url("fondoClaro8.jpg");
   object-fit: cover;
 }
 
@@ -46,7 +46,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 80px;
-  background: rgb(240, 240, 240);
+  background: rgb(220, 220, 220);
   border-radius: 0px 0px 5px 5px;
   box-shadow: 3px 3px 3px black;
   padding-left: 5px;
@@ -59,7 +59,7 @@ body {
   padding: 5px;
   font-size: 2em;
   width: 80px;
-  background: rgb(240, 240, 240);
+  background: rgb(220, 220, 220);
   border-radius: 0px 0px 5px 5px;
   box-shadow: 3px 3px 3px black;
   text-align: center;
@@ -77,18 +77,7 @@ body {
   margin: 100px;
   margin-top: calc(100px - 17.4px);
   color: rgb(0, 0, 0);
-  background: rgb(240, 240, 240);
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 3px 3px 3px black;
-}
-
-.frases {
-  font-size: 2.1em;
-  margin: 100px;
-  margin-top: calc(100px - 17.4px);
-  color: rgb(0, 0, 0);
-  background: rgb(240, 240, 240);
+  background: rgb(220, 220, 220);
   border-radius: 10px;
   padding: 10px;
   box-shadow: 3px 3px 3px black;
@@ -102,7 +91,7 @@ body {
   top: 250px;
   width: 20vw;
   height: 60vh;
-  background: rgb(240, 240, 240);
+  background: rgb(220, 220, 220);
   box-shadow: 3px 3px 3px black;
   border: 2px solid black;
   border-radius: 10px;
@@ -145,6 +134,11 @@ body {
 
 .inputV {
   margin-right: -10px;
+  background: rgb(240, 240, 240);
+}
+
+.inputV2 {
+  background: rgb(240, 240, 240);
 }
 
 .milistabtn {
@@ -224,18 +218,18 @@ body {
   height: 45px;
   width: 45px;
   border-radius: 50%;
-  background: rgb(240, 240, 240);
+  background: rgb(220, 220, 220);
   box-shadow: 3px 3px 3px black;
   cursor: pointer;
   font-size: 1.2em;
 }
 
 .add:hover {
-  background: rgb(235, 235, 235);
+  background: rgb(225, 225, 225);
 }
 
 .add:active {
-  background: rgb(240, 240, 240);
+  background: rgb(220, 220, 220);
 } 
 
 .milistaS {
@@ -263,7 +257,6 @@ body {
   margin: 20px;
   color: rgb(255, 255, 255);
   text-shadow: 1.6px 1.6px 6px black, -1.6px -1.6px 6px black, 1.6px 1.6px 6px black, -1.6px -1.6px 6px black;
-  
 }
 
 .anim {
@@ -386,6 +379,7 @@ body {
   outline: none;
   color: rgb(0, 0, 0);
   border-radius: 10px;
+  background: rgb(240, 240, 240);
 }
 
 .show {
@@ -439,12 +433,10 @@ body {
   align-items: center;
   margin-top: 30px;
   padding: 8px;
-  background: rgb(240, 240, 240);
+  background: rgb(220, 220, 220);
   box-shadow: 3px 3px 3px black;
   border-radius: 10px;
 }
-
-
 
 .dificulty h3{
   margin-right: 10px;
@@ -457,15 +449,15 @@ body {
   padding: 1px;
   border-radius: 10px;
   border: 1px solid black;
-  background: rgb(240, 240, 240);
-}
-
-.dificulty select:hover{
   background: rgb(230, 230, 230);
 }
 
+.dificulty select:hover{
+  background: rgb(220, 220, 220);
+}
+
 .dificulty select:active{
-  background: rgb(240, 240, 240);
+  background: rgb(230, 230, 230);
 }
 
 .restart {
@@ -475,7 +467,7 @@ body {
   height: 43px;
   width: 43px;
   border-radius: 50%;
-  background: rgb(240, 240, 240);
+  background: rgb(220, 220, 220);
   box-shadow: 3px 3px 3px black;
   cursor: pointer;
   padding: 10px;
@@ -484,11 +476,11 @@ body {
 }
 
 .restart:hover {
-  background: rgb(235, 235, 235);
+  background: rgb(225, 225, 225);
 }
 
 .restart:active {
-  background: rgb(240, 240, 240);
+  background: rgb(220, 220, 220);
 }
 
 .Desde{
@@ -497,7 +489,7 @@ body {
   align-items: center;
   justify-content: space-around;
   padding: 8px;
-  background: rgb(240, 240, 240);
+  background: rgb(220, 220, 220);
   box-shadow: 3px 3px 3px black;
   border-radius: 10px;
   margin-top: 50px;
@@ -518,6 +510,7 @@ body {
   outline: none;
   color: rgb(0, 0, 0);
   border-radius: 10px;
+  background: rgb(240, 240, 240);
 }
 
 
@@ -531,18 +524,18 @@ body {
   height: 45px;
   width: 45px;
   border-radius: 50%;
-  background: rgb(240, 240, 240);
+  background: rgb(220, 220, 220);
   box-shadow: 3px 3px 3px black;
   cursor: pointer;
   font-size: 20px;
 }
 
 .ayuda:hover {
-  background: rgb(235, 235, 235);
+  background: rgb(225, 225, 225);
 }
 
 .ayuda:active {
-  background: rgb(240, 240, 240);
+  background: rgb(220, 220, 220);
 }
 
 .help {
@@ -551,7 +544,7 @@ body {
   flex-direction: column;
   top: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.295);
+  background: #ddd;
 }
 
 .visorHelp {
@@ -564,7 +557,7 @@ body {
   align-items: center;
   justify-items: center;
   text-align: center;
-  background: rgb(240, 240, 240);
+  background: rgb(220, 220, 220);
   box-shadow: 3px 3px 3px black;
   border-radius: 10px;
   height: 45px;
@@ -583,7 +576,7 @@ body {
   align-items: center;
   justify-items: center;
   text-align: center;
-  background: rgb(240, 240, 240);
+  background: rgb(220, 220, 220);
   box-shadow: 3px 3px 3px black;
   border-radius: 10px;
   right: 0;
@@ -602,7 +595,7 @@ body {
   align-items: center;
   justify-items: center;
   text-align: center;
-  background: rgb(240, 240, 240);
+  background: rgb(220, 220, 220);
   box-shadow: 3px 3px 3px black;
   border-radius: 10px;
   right: 0;
@@ -622,7 +615,7 @@ body {
   align-items: center;
   justify-items: center;
   text-align: center;
-  background: rgb(240, 240, 240);
+  background: rgb(210, 210, 210);
   box-shadow: 3px 3px 3px black;
   border-radius: 10px;
   right: 0;

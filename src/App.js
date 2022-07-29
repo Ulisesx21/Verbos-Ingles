@@ -322,7 +322,10 @@ function App() {
     }
     setLista(lista)
     localStorage.setItem("milista", JSON.stringify(lista))
-    setWords(JSON.parse(localStorage.getItem("milista")))
+    if(localStorage.getItem("verbos") === "milista"){
+      setWords(JSON.parse(localStorage.getItem("milista")))
+    }
+    setLista(JSON.parse(localStorage.getItem("milista")))
     setState(state = 0)
     setCount(count = 0)
     setCountVisor(countVisor = 0)
@@ -372,7 +375,7 @@ function App() {
               </label>
               <label>
                 <span>Significado</span>
-                <input type="text" name="significado" placeholder='...' />
+                <input type="text" name="significado" placeholder='...' className='inputV2'/>
               </label>
               <button type="submit" className='milistabtn'>Add</button>
             </form>
