@@ -656,6 +656,18 @@ body {
   }
 }
 
+@media (min-width: 1980px) {
+
+  .restart{
+    margin-top: 80px;
+    margin-bottom: 30px;
+  }
+
+  .dificulty {
+    margin-top: 50px;
+  }
+}
+
 @media (max-width: 1980px) {
   .helpPorcentaje {
     margin-left: 16%;
@@ -786,6 +798,11 @@ body {
   .help {
     display: none;
   }
+
+  .restart {
+    margin-top: 45px;
+    margin-bottom: 15px;
+  }
 }
 
 @media (max-width: 990px) {
@@ -812,6 +829,10 @@ body {
 
   .p{
     font-size: 22px;
+  }
+
+  .restart {
+    margin-top: 60px;
   }
 
   .visto{
@@ -923,6 +944,11 @@ body {
 
     .ayuda {
       margin-top: 45px;
+    }
+
+    .restart {
+      margin-top: 60px;
+      margin-bottom: 0px;
     }
   }
 
