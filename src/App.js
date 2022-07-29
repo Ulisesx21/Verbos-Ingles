@@ -13,6 +13,7 @@ import Preps from './components/Words/Preps';
 import Dificulty from './components/Dificulty';
 import Desde from './components/Desde';
 import Help from './components/Help';
+import MiLista from './components/MiLista';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faArrowLeft, faArrowRight, faQuestion, faPlus, faRotateRight, faLineChart } from '@fortawesome/free-solid-svg-icons';
 
@@ -81,7 +82,7 @@ function App() {
     }
     else if (localStorage.getItem("verbos") === "milista") {
       if (JSON.parse(localStorage.getItem("milista")) === null) {
-        setWords(lista)
+
       } else {
         setLista(JSON.parse(localStorage.getItem("milista")))
         setWords(JSON.parse(localStorage.getItem("milista")))
@@ -210,8 +211,12 @@ function App() {
       animYel()
     }
     if (e.target.value === "milista") {
-      setLista(JSON.parse(localStorage.getItem("milista")))
-      setWords(lista)
+      if(JSON.parse(localStorage.getItem("milista")) === null){
+        setLista([{ verbo: "", respuesta: [] }])
+        setWords([{ verbo: "", respuesta: [] }])
+      }else{
+        setWords(JSON.parse(localStorage.getItem("milista")))
+      }
       setAddList(true)
       localStorage.setItem("verbos", "milista")
       localStorage.setItem("state", "0")
@@ -362,32 +367,14 @@ function App() {
         de Inglés a Español
       </h1>
 
-      <div className="add" onClick={() => setAddList(!addlist)}>{plus}</div>
-      {addlist ?
-        <div>
-          <div className='milista'>
-            <h1>Mi Lista</h1>
-            <hr />
-            <form className='form' onSubmit={submitList}>
-              <label>
-                <span>Palabra</span>
-                <input type="text" name="palabra" className='inputV' placeholder='...' />
-              </label>
-              <label>
-                <span>Significado</span>
-                <input type="text" name="significado" placeholder='...' className='inputV2'/>
-              </label>
-              <button type="submit" className='milistabtn'>Add</button>
-            </form>
-            <hr />
-            <div className='divpalabras'>
-              {lista[0].verbo === "" ? "" : lista.map((i, o) => <div key={o} className="verbolist"><span className='spanlist'>{i.verbo}</span>{i.verbo === "" ? "" : <button className='btnlist' onClick={() => deleteW(o)}>Delete</button>}</div>)}
-            </div>
-          </div>
-        </div>
-        : ""
-      }
-
+      <MiLista 
+        setAddList={setAddList}
+        lista={lista}
+        deleteW={deleteW}
+        addlist={addlist}
+        plus={plus}
+        submitList={submitList}
+      />
 
       <Main
         input={input}
