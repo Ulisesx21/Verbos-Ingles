@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Verbos-Ingles/static/css/main.9dc901ca.css",
+    "main.css": "/Verbos-Ingles/static/css/main.a9acb0a1.css",
     "main.js": "/Verbos-Ingles/static/js/main.b4b18cbb.js",
-    "static/media/fondoClaro.jpg": "/Verbos-Ingles/static/media/fondoClaro.f3dd2fcf17f7691915c0.jpg",
+    "static/media/fondoClaro.jpg": "/Verbos-Ingles/static/media/fondoClaro.7bf45b2e6d127c2363db.jpg",
     "static/media/universe.jpg": "/Verbos-Ingles/static/media/universe.7a9f6ff89f2958829746.jpg",
     "index.html": "/Verbos-Ingles/index.html",
-    "main.9dc901ca.css.map": "/Verbos-Ingles/static/css/main.9dc901ca.css.map",
+    "main.a9acb0a1.css.map": "/Verbos-Ingles/static/css/main.a9acb0a1.css.map",
     "main.b4b18cbb.js.map": "/Verbos-Ingles/static/js/main.b4b18cbb.js.map"
   },
   "entrypoints": [
-    "static/css/main.9dc901ca.css",
+    "static/css/main.a9acb0a1.css",
     "static/js/main.b4b18cbb.js"
   ]
 }
