@@ -15,7 +15,7 @@ import Desde from './components/Desde';
 import Help from './components/Help';
 import MiLista from './components/MiLista';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faArrowLeft, faArrowRight, faQuestion, faPlus, faRotateRight, faLineChart } from '@fortawesome/free-solid-svg-icons';
+import { faEye, faArrowLeft, faArrowRight, faQuestion, faPlus, faRotateRight} from '@fortawesome/free-solid-svg-icons';
 
 
 

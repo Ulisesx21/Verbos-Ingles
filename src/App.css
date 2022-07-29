@@ -46,9 +46,9 @@ body {
   justify-content: center;
   align-items: center;
   width: 80px;
-  background: rgb(220, 220, 220);
+  background: rgb(235, 235, 235);
   border-radius: 0px 0px 5px 5px;
-  box-shadow: 3px 3px 3px black;
+  box-shadow: 3px 3px 2px black;
   padding-left: 5px;
 }
 
@@ -59,9 +59,9 @@ body {
   padding: 5px;
   font-size: 2em;
   width: 80px;
-  background: rgb(220, 220, 220);
+  background: rgb(235, 235, 235);
   border-radius: 0px 0px 5px 5px;
-  box-shadow: 3px 3px 3px black;
+  box-shadow: 3px 3px 2px black;
   text-align: center;
   transition: all 0.5s ease-out;
 }
@@ -77,10 +77,10 @@ body {
   margin: 100px;
   margin-top: calc(100px - 17.4px);
   color: rgb(0, 0, 0);
-  background: rgb(220, 220, 220);
+  background: rgb(235, 235, 235);
   border-radius: 10px;
   padding: 10px;
-  box-shadow: 3px 3px 3px black;
+  box-shadow: 3px 3px 2px black;
 }
 
 .milista {
@@ -91,7 +91,7 @@ body {
   top: 250px;
   width: 20vw;
   height: 60vh;
-  background: rgb(220, 220, 220);
+  background: rgb(235, 235, 235);
   box-shadow: 3px 3px 3px black;
   border: 2px solid black;
   border-radius: 10px;
@@ -160,6 +160,7 @@ body {
 
 .milistabtn:active {
   background: rgb(240, 240, 240);
+  transform: scale(0.95);
 }
 
 .verbolist {
@@ -197,6 +198,7 @@ body {
 
 .btnlist:active {
   background: rgb(240, 240, 240);
+  transform: scale(0.95);
 }
 
 .spanlist {
@@ -218,18 +220,19 @@ body {
   height: 45px;
   width: 45px;
   border-radius: 50%;
-  background: rgb(220, 220, 220);
-  box-shadow: 3px 3px 3px black;
+  background: rgb(235, 235, 235);
+  box-shadow: 3px 3px 2px black;
   cursor: pointer;
   font-size: 1.2em;
 }
 
 .add:hover {
-  background: rgb(225, 225, 225);
+  background: rgb(230, 230, 230);
 }
 
 .add:active {
-  background: rgb(220, 220, 220);
+  background: rgb(235, 235, 235);
+  transform: scale(0.95);
 } 
 
 .milistaS {
@@ -379,7 +382,7 @@ body {
   outline: none;
   color: rgb(0, 0, 0);
   border-radius: 10px;
-  background: rgb(240, 240, 240);
+  background: rgb(235, 235, 235);
 }
 
 .show {
@@ -433,8 +436,8 @@ body {
   align-items: center;
   margin-top: 30px;
   padding: 8px;
-  background: rgb(220, 220, 220);
-  box-shadow: 3px 3px 3px black;
+  background: rgb(235, 235, 235);
+  box-shadow: 3px 3px 2px black;
   border-radius: 10px;
 }
 
@@ -449,15 +452,15 @@ body {
   padding: 1px;
   border-radius: 10px;
   border: 1px solid black;
-  background: rgb(230, 230, 230);
+  background: rgb(235, 235, 235);
 }
 
 .dificulty select:hover{
-  background: rgb(220, 220, 220);
+  background: rgb(225, 225, 225);
 }
 
 .dificulty select:active{
-  background: rgb(230, 230, 230);
+  background: rgb(235, 235, 235);  
 }
 
 .restart {
@@ -467,8 +470,8 @@ body {
   height: 43px;
   width: 43px;
   border-radius: 50%;
-  background: rgb(220, 220, 220);
-  box-shadow: 3px 3px 3px black;
+  background: rgb(235, 235, 235);
+  box-shadow: 3px 3px 2px black;
   cursor: pointer;
   padding: 10px;
   margin-top: 50px;
@@ -476,11 +479,12 @@ body {
 }
 
 .restart:hover {
-  background: rgb(225, 225, 225);
+  background: rgb(230, 230, 230);
 }
 
 .restart:active {
-  background: rgb(220, 220, 220);
+  background: rgb(235, 235, 235);
+  transform: scale(0.95);
 }
 
 .Desde{
@@ -489,8 +493,8 @@ body {
   align-items: center;
   justify-content: space-around;
   padding: 8px;
-  background: rgb(220, 220, 220);
-  box-shadow: 3px 3px 3px black;
+  background: rgb(235, 235, 235);
+  box-shadow: 3px 3px 2px black;
   border-radius: 10px;
   margin-top: 50px;
 }
@@ -510,7 +514,7 @@ body {
   outline: none;
   color: rgb(0, 0, 0);
   border-radius: 10px;
-  background: rgb(240, 240, 240);
+  background: rgb(235, 235, 235);
 }
 
 
@@ -524,18 +528,19 @@ body {
   height: 45px;
   width: 45px;
   border-radius: 50%;
-  background: rgb(220, 220, 220);
-  box-shadow: 3px 3px 3px black;
+  background: rgb(235, 235, 235);
+  box-shadow: 3px 3px 2px black;
   cursor: pointer;
   font-size: 20px;
 }
 
 .ayuda:hover {
-  background: rgb(225, 225, 225);
+  background: rgb(230, 230, 230);
 }
 
 .ayuda:active {
-  background: rgb(220, 220, 220);
+  background: rgb(235, 235, 235);
+  transform: scale(0.95);
 }
 
 .help {
@@ -557,8 +562,8 @@ body {
   align-items: center;
   justify-items: center;
   text-align: center;
-  background: rgb(220, 220, 220);
-  box-shadow: 3px 3px 3px black;
+  background: rgb(235, 235, 235);
+  box-shadow: 3px 3px 2px black;
   border-radius: 10px;
   height: 45px;
   width: 330px;
@@ -576,8 +581,8 @@ body {
   align-items: center;
   justify-items: center;
   text-align: center;
-  background: rgb(220, 220, 220);
-  box-shadow: 3px 3px 3px black;
+  background: rgb(235, 235, 235);
+  box-shadow: 3px 3px 2px black;
   border-radius: 10px;
   right: 0;
   margin-right: 17.8%;
@@ -595,8 +600,8 @@ body {
   align-items: center;
   justify-items: center;
   text-align: center;
-  background: rgb(220, 220, 220);
-  box-shadow: 3px 3px 3px black;
+  background: rgb(235, 235, 235);
+  box-shadow: 3px 3px 2px black;
   border-radius: 10px;
   right: 0;
   margin-right: 20%;
@@ -615,8 +620,8 @@ body {
   align-items: center;
   justify-items: center;
   text-align: center;
-  background: rgb(210, 210, 210);
-  box-shadow: 3px 3px 3px black;
+  background: rgb(235, 235, 235);
+  box-shadow: 3px 3px 2px black;
   border-radius: 10px;
   right: 0;
   margin-right: 17.8%;
