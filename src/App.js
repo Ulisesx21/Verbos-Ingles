@@ -14,7 +14,7 @@ import Dificulty from './components/Dificulty';
 import Desde from './components/Desde';
 import Help from './components/Help';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faArrowLeft, faArrowRight, faQuestion, faPlus, faRotateRight, faLineChart} from '@fortawesome/free-solid-svg-icons';
+import { faEye, faArrowLeft, faArrowRight, faQuestion, faPlus, faRotateRight, faLineChart } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -65,20 +65,23 @@ function App() {
   // Inicializando partida con LocalStorage
   useEffect(() => {
     if (localStorage.getItem("verbos") === "hard") {
+      setLista(JSON.parse(localStorage.getItem("milista")))
       setWords(WordsH)
       setHardBool(true)
     }
     else if (localStorage.getItem("verbos") === "v I") {
+      setLista(JSON.parse(localStorage.getItem("milista")))
       setWords(Verb1)
       setVerb1Bool(true)
     }
     else if (localStorage.getItem("verbos") === "v II") {
+      setLista(JSON.parse(localStorage.getItem("milista")))
       setWords(Verb2)
       setVerb2Bool(true)
     }
     else if (localStorage.getItem("verbos") === "milista") {
       if (JSON.parse(localStorage.getItem("milista")) === null) {
-        setWords(Words)
+        setWords(lista)
       } else {
         setLista(JSON.parse(localStorage.getItem("milista")))
         setWords(JSON.parse(localStorage.getItem("milista")))
@@ -86,26 +89,32 @@ function App() {
       setMiLista(true)
     }
     else if (localStorage.getItem("verbos") === "prep") {
+      setLista(JSON.parse(localStorage.getItem("milista")))
       setWords(Preps)
       setPreps(true)
     }
     else if (localStorage.getItem("verbos") === "a I") {
+      setLista(JSON.parse(localStorage.getItem("milista")))
       setWords(Adj1)
       setAdj1Bool(true)
     }
     else if (localStorage.getItem("verbos") === "a II") {
+      setLista(JSON.parse(localStorage.getItem("milista")))
       setWords(Adj2)
       setAdj2Bool(true)
     }
     else if (localStorage.getItem("verbos") === "a III") {
+      setLista(JSON.parse(localStorage.getItem("milista")))
       setWords(Adj3)
       setAdj3Bool(true)
     }
     else if (localStorage.getItem("verbos") === "easy") {
+      setLista(JSON.parse(localStorage.getItem("milista")))
       setWords(WordsE)
       setEasyBool(true)
     }
     else {
+      setLista(JSON.parse(localStorage.getItem("milista")))
       setWords(WordsE)
       setEasyBool(true)
     }
@@ -201,6 +210,7 @@ function App() {
       animYel()
     }
     if (e.target.value === "milista") {
+      setLista(JSON.parse(localStorage.getItem("milista")))
       setWords(lista)
       setAddList(true)
       localStorage.setItem("verbos", "milista")
@@ -288,13 +298,15 @@ function App() {
     if (e.target[0].value !== "" && e.target[1].value !== "") {
       if (lista[0].verbo === "") {
         lista[0] = { verbo: e.target[0].value.toLowerCase(), respuesta: [e.target[1].value.toLowerCase()] };
-        console.log("0")
       } else {
         lista.push({ verbo: e.target[0].value.toLowerCase(), respuesta: [e.target[1].value.toLowerCase()] });
       }
       setLista(lista)
       localStorage.setItem("milista", JSON.stringify(lista))
-      setWords(JSON.parse(localStorage.getItem("milista")))
+      setLista(JSON.parse(localStorage.getItem("milista")))
+      if(localStorage.getItem("verbos") === "milista"){
+        setWords(JSON.parse(localStorage.getItem("milista")))
+      }
       e.target[0].value = ""
       e.target[1].value = ""
       e.target[0].select()
@@ -302,11 +314,11 @@ function App() {
   }
 
   // eleminar palabras de Mi Lista
-  function deleteW(e){
-    if(lista.length === 1){
+  function deleteW(e) {
+    if (lista.length === 1) {
       lista[0] = { verbo: "", respuesta: [] }
-    }else{
-      lista.splice(e,1)
+    } else {
+      lista.splice(e, 1)
     }
     setLista(lista)
     localStorage.setItem("milista", JSON.stringify(lista))
@@ -317,8 +329,8 @@ function App() {
     setInput("1")
     setBoolean(false)
     setGameState(true)
-    localStorage.setItem("state","0")
-    localStorage.setItem("count","0")
+    localStorage.setItem("state", "0")
+    localStorage.setItem("count", "0")
   }
 
   return (
@@ -333,7 +345,7 @@ function App() {
 
       <h1 className='titulo'>
         Traduce
-        {" " + Words.length}
+        {Words[state].verbo === "" ? " " + 0 : " " + Words.length}
         {Words === Verb1
           || Words === Verb2
           ? " Verbos "
@@ -346,33 +358,33 @@ function App() {
               : " Palabras "}
         de Inglés a Español
       </h1>
-        
-      <div className="add" onClick={()=>setAddList(!addlist)}>{plus}</div>
-      {addlist ? 
+
+      <div className="add" onClick={() => setAddList(!addlist)}>{plus}</div>
+      {addlist ?
         <div>
-      <div className='milista'>
-        <h1>Mi Lista</h1>
-        <hr />
-        <form className='form' onSubmit={submitList}>
-          <label>
-            <span>Palabra</span>
-            <input type="text" name="palabra" className='inputV' placeholder='...' />
-          </label>
-          <label>
-            <span>Significado</span>
-            <input type="text" name="significado" placeholder='...' />
-          </label>
-          <button type="submit" className='milistabtn'>Add</button>
-        </form>
-        <hr />
-        <div className='divpalabras'>
-          {lista[0].verbo === "" ? "" : lista.map((i, o) => <div key={o} className="verbolist"><span className='spanlist'>{i.verbo}</span>{i.verbo === "" ? "" : <button className='btnlist' onClick={()=>deleteW(o)}>Delete</button>}</div>)}
+          <div className='milista'>
+            <h1>Mi Lista</h1>
+            <hr />
+            <form className='form' onSubmit={submitList}>
+              <label>
+                <span>Palabra</span>
+                <input type="text" name="palabra" className='inputV' placeholder='...' />
+              </label>
+              <label>
+                <span>Significado</span>
+                <input type="text" name="significado" placeholder='...' />
+              </label>
+              <button type="submit" className='milistabtn'>Add</button>
+            </form>
+            <hr />
+            <div className='divpalabras'>
+              {lista[0].verbo === "" ? "" : lista.map((i, o) => <div key={o} className="verbolist"><span className='spanlist'>{i.verbo}</span>{i.verbo === "" ? "" : <button className='btnlist' onClick={() => deleteW(o)}>Delete</button>}</div>)}
+            </div>
+          </div>
         </div>
-      </div>
-      </div> 
-      : ""
+        : ""
       }
-      
+
 
       <Main
         input={input}
@@ -397,6 +409,7 @@ function App() {
         length={Words.length}
         restart={reset}
         iconrestart={restart}
+        words={Words}
       />
 
       <Dificulty

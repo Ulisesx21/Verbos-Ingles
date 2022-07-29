@@ -20,7 +20,7 @@ export default function Main(props) {
                 {props.boolean ? `${respuesta1 ? respuesta1 : ""} ${respuesta2 ? "/" : ""} ${respuesta2 ? respuesta2 : ""}` : <span className="showicon">{props.icon}</span>}
             </div>
             <div className="incorrecto-container">
-                <h2 className="incorrecto">{props.input}</h2>
+                <h2 className="incorrecto">{props.Verbos[props.count].verbo === "" ? 0 : props.input}</h2>
             </div>
         </div>
     )

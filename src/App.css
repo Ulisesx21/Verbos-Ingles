@@ -399,6 +399,7 @@ body {
   font-size: 18px;
   border-radius: 10px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .showicon {
@@ -409,11 +410,11 @@ body {
 }
 
 .show:hover{
-  cursor: pointer;
+  background: rgb(230, 230, 230);
 }
 
 .show:active{
-  background: rgb(226, 226, 226);
+  background: rgb(235, 235, 235);
 }
 
 .incorrecto-container{
@@ -526,7 +527,7 @@ body {
   justify-content: center;
   align-items: center;
   top: 200px;
-  right: 40px;
+  right: 20px;
   height: 45px;
   width: 45px;
   border-radius: 50%;
