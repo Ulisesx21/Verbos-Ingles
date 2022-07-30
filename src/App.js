@@ -82,7 +82,7 @@ function App() {
     }
     else if (localStorage.getItem("verbos") === "milista") {
       if (JSON.parse(localStorage.getItem("milista")) === null) {
-
+        
       } else {
         setLista(JSON.parse(localStorage.getItem("milista")))
         setWords(JSON.parse(localStorage.getItem("milista")))
@@ -115,7 +115,6 @@ function App() {
       setEasyBool(true)
     }
     else {
-      setLista(JSON.parse(localStorage.getItem("milista")))
       setWords(WordsE)
       setEasyBool(true)
     }
@@ -341,6 +340,8 @@ function App() {
     localStorage.setItem("state", "0")
     localStorage.setItem("count", "0")
   }
+
+  console.log(lista)
 
   return (
     <div className="App">

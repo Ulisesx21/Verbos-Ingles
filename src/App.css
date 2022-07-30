@@ -453,6 +453,7 @@ body {
   border-radius: 10px;
   border: 1px solid black;
   background: rgb(235, 235, 235);
+  cursor: pointer;
 }
 
 .dificulty select:hover{
