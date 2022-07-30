@@ -300,7 +300,7 @@ function App() {
   // agregar palabras a Mi Lista
   function submitList(e) {
     e.preventDefault()
-    if (e.target[0].value !== "" && e.target[1].value !== "") {
+    if (e.target[0].value !== "" && e.target[1].value !== "" && e.target[0].value.length <= 20 && e.target[1].value.length <= 20) {
       if (lista[0].verbo === "") {
         lista[0] = { verbo: e.target[0].value.toLowerCase(), respuesta: [e.target[1].value.toLowerCase()] };
       } else {
