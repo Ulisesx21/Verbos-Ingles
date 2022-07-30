@@ -217,8 +217,8 @@ body {
   position: absolute;
   top: 200px;
   left: 20px;
-  height: 45px;
-  width: 45px;
+  height: 43px;
+  width: 43px;
   border-radius: 50%;
   background: rgb(235, 235, 235);
   box-shadow: 3px 3px 2px black;
@@ -525,8 +525,8 @@ body {
   align-items: center;
   top: 200px;
   right: 20px;
-  height: 45px;
-  width: 45px;
+  height: 43px;
+  width: 43px;
   border-radius: 50%;
   background: rgb(235, 235, 235);
   box-shadow: 3px 3px 2px black;
