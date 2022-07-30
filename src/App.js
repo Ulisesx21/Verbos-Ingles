@@ -287,6 +287,7 @@ function App() {
     setGameState(true)
     setInputBoolean(false)
     localStorage.setItem("count", "0")
+    localStorage.setItem("state", "0")
   }
 
   // Animacion amarillo
