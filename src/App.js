@@ -341,8 +341,6 @@ function App() {
     localStorage.setItem("count", "0")
   }
 
-  console.log(lista)
-
   return (
     <div className="App">
 

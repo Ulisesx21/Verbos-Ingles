@@ -662,7 +662,7 @@ body {
   }
 }
 
-@media (min-width: 1980px) {
+@media (min-width: 1920px) {
 
   .restart{
     margin-top: 80px;
@@ -672,9 +672,26 @@ body {
   .dificulty {
     margin-top: 50px;
   }
+
+  .titulo {
+    font-size: 2.2em;
+    margin: 130px;
+    margin-top: calc(130px - 17.4px);
+  }
+
+  .helpInput {
+    top: 480px;
+    margin-right: 23.8%;
+  }
+
+  .helpVisor {
+    top: 533px;
+    margin-right: 22%;
+  }
+
 }
 
-@media (max-width: 1980px) {
+@media (max-width: 1920px) {
   .helpPorcentaje {
     margin-left: 16%;
   }
@@ -689,14 +706,6 @@ body {
 
   .helpVisor {
     margin-right: 22%;
-  }
-
-  .helpDesde {
-    margin-right: 29%;
-  }
-
-  .helpDif {
-    margin-right: 27%;
   }
 }
 
