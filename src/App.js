@@ -122,6 +122,10 @@ function App() {
     setInput(Number(localStorage.getItem("state")) + 1)
     setCountVisor(Number(localStorage.getItem("state")))
     setCount(Number(localStorage.getItem("count")))
+    setAnimation(true)
+      setTimeout(() => {
+        setAnimation(false)
+    }, 800)
   }, [])
 
 
@@ -142,6 +146,7 @@ function App() {
             e.target.value = ""
             setCountVisor(countVisor + 1)
             setGameState(false)
+            setBoolean(false)
             setInputBoolean(true)
             setInput("Finalizado")
           } else {
@@ -161,6 +166,10 @@ function App() {
           }
         } else {
           setAnimRed(true)
+          setInput("Incorrecto")
+          setTimeout(() => {
+            setInput(`${state+1}`)
+          }, 820)
           setTimeout(() => {
             setAnimRed(false)
           }, 1000)
@@ -268,6 +277,10 @@ function App() {
       localStorage.setItem("state", `${Number(e.target.value) - 1}`)
       localStorage.setItem("count", `${count}`)
       e.target.value = ""
+      setAnimation(true)
+        setTimeout(() => {
+      setAnimation(false)
+      }, 800)
       setAnimOrange(true)
       setTimeout(() => {
         setAnimOrange(false)
@@ -287,6 +300,11 @@ function App() {
     setInputBoolean(false)
     localStorage.setItem("count", "0")
     localStorage.setItem("state", "0")
+    setAnimation(true)
+    setTimeout(() => {
+      setAnimation(false)
+    }, 800)
+    
   }
 
   // Animacion amarillo
@@ -303,6 +321,12 @@ function App() {
     if (e.target[0].value !== "" && e.target[1].value !== "" && e.target[0].value.length <= 20 && e.target[1].value.length <= 20) {
       if (lista[0].verbo === "") {
         lista[0] = { verbo: e.target[0].value.toLowerCase(), respuesta: [e.target[1].value.toLowerCase()] };
+        if(lista.length === 1 && localStorage.getItem("verbos") === "milista" && lista[0].verbo !== "" && e.target[0].value !== "" && e.target[1].value !== ""){
+          setAnimation(true)
+          setTimeout(() => {
+            setAnimation(false)
+        }, 800)
+        }
       } else {
         lista.push({ verbo: e.target[0].value.toLowerCase(), respuesta: [e.target[1].value.toLowerCase()] });
       }
@@ -339,6 +363,12 @@ function App() {
     setGameState(true)
     localStorage.setItem("state", "0")
     localStorage.setItem("count", "0")
+    if(localStorage.getItem("verbos") === "milista" && e === 0){
+      setAnimation(true)
+      setTimeout(() => {
+      setAnimation(false)
+    }, 800)
+    }
   }
 
   return (
