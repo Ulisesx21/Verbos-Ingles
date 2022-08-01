@@ -38,7 +38,6 @@ function App() {
 
   // Animation Booleans
   let [animation, setAnimation] = useState(false)
-  let [animIncorrect, setAnimIncorrect] = useState(false)
   let [animRed, setAnimRed] = useState(false)
   let [animBlue, setAnimBlue] = useState(false)
   let [animViolet, setAnimViolet] = useState(false)
@@ -376,8 +375,8 @@ function App() {
     if(localStorage.getItem("verbos") === "milista" && e === 0){
       setAnimation(true)
       setTimeout(() => {
-      setAnimation(false)
-    }, 800)
+        setAnimation(false)
+      }, 800)
     }
   }
 
@@ -432,7 +431,6 @@ function App() {
         anim4={animViolet}
         anim5={animYellow}
         anim6={animOrange}
-        animInc={animIncorrect}
       />
 
       <Desde
