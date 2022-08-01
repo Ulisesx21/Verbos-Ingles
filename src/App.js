@@ -203,6 +203,7 @@ function App() {
       localStorage.setItem("state", "0")
       reset()
       animYel()
+      setAddList(false)
     }
     if (e.target.value === "v I") {
       setWords(Verb1)
@@ -210,6 +211,7 @@ function App() {
       localStorage.setItem("state", "0")
       reset()
       animYel()
+      setAddList(false)
     }
     if (e.target.value === "v II") {
       setWords(Verb2)
@@ -217,6 +219,7 @@ function App() {
       localStorage.setItem("state", "0")
       reset()
       animYel()
+      setAddList(false)
     }
     if (e.target.value === "milista") {
       if(JSON.parse(localStorage.getItem("milista")) === null){
@@ -225,7 +228,9 @@ function App() {
       }else{
         setWords(JSON.parse(localStorage.getItem("milista")))
       }
-      setAddList(true)
+      if(lista[0].verbo === ""){
+        setAddList(true)
+      }
       localStorage.setItem("verbos", "milista")
       localStorage.setItem("state", "0")
       reset()
@@ -237,6 +242,7 @@ function App() {
       localStorage.setItem("state", "0")
       reset()
       animYel()
+      setAddList(false)
     }
     if (e.target.value === "a I") {
       setWords(Adj1)
@@ -244,6 +250,7 @@ function App() {
       localStorage.setItem("state", "0")
       reset()
       animYel()
+      setAddList(false)
     }
     if (e.target.value === "a II") {
       setWords(Adj2)
@@ -251,6 +258,7 @@ function App() {
       localStorage.setItem("state", "0")
       reset()
       animYel()
+      setAddList(false)
     }
     if (e.target.value === "a III") {
       setWords(Adj3)
@@ -258,6 +266,7 @@ function App() {
       localStorage.setItem("state", "0")
       reset()
       animYel()
+      setAddList(false)
     }
     if (e.target.value === "hard") {
       setWords(WordsH)
@@ -265,6 +274,7 @@ function App() {
       localStorage.setItem("state", "0")
       reset()
       animYel()
+      setAddList(false)
     }
   }
 
