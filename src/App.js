@@ -38,6 +38,7 @@ function App() {
 
   // Animation Booleans
   let [animation, setAnimation] = useState(false)
+  let [animIncorrect, setAnimIncorrect] = useState(false)
   let [animRed, setAnimRed] = useState(false)
   let [animBlue, setAnimBlue] = useState(false)
   let [animViolet, setAnimViolet] = useState(false)
@@ -166,7 +167,6 @@ function App() {
           }
         } else {
           setAnimRed(true)
-          setInput("Incorrecto")
           setTimeout(() => {
             setInput(`${state+1}`)
           }, 820)
@@ -432,6 +432,7 @@ function App() {
         anim4={animViolet}
         anim5={animYellow}
         anim6={animOrange}
+        animInc={animIncorrect}
       />
 
       <Desde
