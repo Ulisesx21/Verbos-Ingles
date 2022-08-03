@@ -16,6 +16,9 @@ export default function Help(props){
           <div className='helpVisor'>
             <h1>{props.left} Haga "Click" o presione "Ctrl"</h1>
           </div>
+          <div className='helpLista'>
+            <h1>{props.left} Crea Tu Lista</h1>
+          </div>
         </div>
       </div>
     )

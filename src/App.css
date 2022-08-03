@@ -635,6 +635,25 @@ body {
   font-size: 1.5em;
 }
 
+.helpLista {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  background: rgb(235, 235, 235);
+  box-shadow: 3px 3px 2px black;
+  border-radius: 10px;
+  top: 200px;
+  left: 120px;
+  height: 42px;
+  padding: 10px;
+}
+
+.helpLista h1 {
+  font-size: 1.5em;
+}
+
 @media (max-height: 801px) {
   .titulo{
     margin: 40px;
