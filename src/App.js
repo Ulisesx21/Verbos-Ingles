@@ -287,6 +287,8 @@ function App() {
       localStorage.setItem("count", `${count}`)
       e.target.value = ""
       setAnimation(true)
+      setCounterState(true)
+      setBoolean(false)
         setTimeout(() => {
       setAnimation(false)
       }, 800)
@@ -362,16 +364,16 @@ function App() {
     localStorage.setItem("milista", JSON.stringify(lista))
     if(localStorage.getItem("verbos") === "milista"){
       setWords(JSON.parse(localStorage.getItem("milista")))
+      setState(state = 0)
+      setCount(count = 0)
+      setCountVisor(countVisor = 0)
+      setInput("1")
+      localStorage.setItem("state", "0")
+      localStorage.setItem("count", "0")
     }
-    setLista(JSON.parse(localStorage.getItem("milista")))
-    setState(state = 0)
-    setCount(count = 0)
-    setCountVisor(countVisor = 0)
-    setInput("1")
     setBoolean(false)
+    setLista(JSON.parse(localStorage.getItem("milista")))
     setGameState(true)
-    localStorage.setItem("state", "0")
-    localStorage.setItem("count", "0")
     if(localStorage.getItem("verbos") === "milista" && e === 0){
       setAnimation(true)
       setTimeout(() => {
