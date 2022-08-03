@@ -326,7 +326,7 @@ function App() {
     }, 1000)
   }
 
-  // agregar palabras a Mi Lista
+  // Agregar palabras a Mi Lista
   function submitList(e) {
     e.preventDefault()
     if (e.target[0].value !== "" && e.target[1].value !== "" && e.target[0].value.length <= 20 && e.target[1].value.length <= 20) {
@@ -353,7 +353,7 @@ function App() {
     }
   }
 
-  // eleminar palabras de Mi Lista
+  // Eliminar palabras de Mi Lista
   function deleteW(e) {
     if (lista.length === 1) {
       lista[0] = { verbo: "", respuesta: [] }
@@ -370,8 +370,8 @@ function App() {
       setInput("1")
       localStorage.setItem("state", "0")
       localStorage.setItem("count", "0")
+      setBoolean(false)
     }
-    setBoolean(false)
     setLista(JSON.parse(localStorage.getItem("milista")))
     setGameState(true)
     if(localStorage.getItem("verbos") === "milista" && e === 0){
