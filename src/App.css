@@ -89,7 +89,7 @@ body {
   position: absolute;
   left: 15px;
   top: 250px;
-  width: 20vw;
+  width: 338px;
   height: 60vh;
   background: rgb(235, 235, 235);
   box-shadow: 3px 3px 3px black;
@@ -121,7 +121,6 @@ body {
 }
 
 .form label input{
-  width: 88%;
   border-radius: 10px;
   border: 1px solid black;
   height: 25px;
@@ -132,13 +131,19 @@ body {
   box-shadow: 2px 2px 3px black;
 }
 
+.spanl {
+  padding-left: 10px;
+}
+
 .inputV {
+  width: 95.5%;
   margin-right: -10px;
   background: rgb(240, 240, 240);
 }
 
 .inputV2 {
   background: rgb(240, 240, 240);
+  width: 86%;
 }
 
 .milistabtn {
@@ -343,7 +348,7 @@ body {
     border: 6px solid rgba(105, 105, 105, 0.486);
     }
   50% {
-    border: 6px solid rgba(255, 251, 34, 0.75);
+    border: 6px solid rgba(255, 251, 34, 0.8);
     }
   100% {
     border: 6px solid rgba(105, 105, 105, 0.486);
@@ -800,6 +805,8 @@ body {
   .Desde {
     margin-top: 30px;
   }
+
+ 
 }
 
 @media (max-width: 1480px) {
@@ -825,6 +832,10 @@ body {
 
   .helpDif {
     margin-right: 18.15%;
+  }
+
+  .milista {
+    width: 300px;
   }
 }
 

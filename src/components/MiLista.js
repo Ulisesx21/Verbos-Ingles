@@ -10,7 +10,7 @@ export default function MiLista(props) {
                     <hr />
                     <form className='form' onSubmit={props.submitList}>
                         <label>
-                            <span>Palabra</span>
+                            <span className="spanl">Palabra</span>
                             <input type="text" name="palabra" className='inputV' placeholder='...' />
                         </label>
                         <label>
