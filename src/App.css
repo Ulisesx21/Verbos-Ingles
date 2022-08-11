@@ -1045,13 +1045,9 @@ body {
   @media (max-width: 400px) {
 
     .Alert div {
-      
       width: 95vw;
-      
     }
     
   }
-
-  
 
 }
