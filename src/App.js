@@ -35,6 +35,7 @@ function App() {
   let [gameState, setGameState] = useState(true)
   let [helpState, setHelpState] = useState(false)
   let [addlist, setAddList] = useState(false)
+  let [vistasBool, setVistasBool] = useState(false)
 
   // Animation Booleans
   let [animation, setAnimation] = useState(false)
@@ -65,6 +66,7 @@ function App() {
 
   // Inicializando partida con LocalStorage
   useEffect(() => {
+
     if (localStorage.getItem("verbos") === "hard") {
       setLista(JSON.parse(localStorage.getItem("milista")))
       setWords(WordsH)
@@ -118,6 +120,12 @@ function App() {
       setWords(WordsE)
       setEasyBool(true)
     }
+
+    
+    if(localStorage.getItem("see") === null){
+      localStorage.setItem("see",JSON.stringify([]))
+    }
+    
     setState(Number(localStorage.getItem("state")))
     setInput(Number(localStorage.getItem("state")) + 1)
     setCountVisor(Number(localStorage.getItem("state")))
@@ -137,6 +145,10 @@ function App() {
     }
   })
 
+  window.addEventListener("click",()=>{
+    setVistasBool(false)
+  })
+
   // Logica del Juego
   function handleChange(e) {
     if (e.key === "Enter") {
@@ -148,6 +160,9 @@ function App() {
             setGameState(false)
             setBoolean(false)
             setInputBoolean(true)
+            if(JSON.parse(localStorage.getItem("see")).length >= 1){
+              setVistasBool(true)
+            }
             setInput("Finalizado")
           } else {
             setState(state + 1)
@@ -190,6 +205,12 @@ function App() {
         setCounterState(!counterState)
         setCount(count + 1)
         localStorage.setItem("count", `${count + 1}`)
+        let aux = JSON.parse(localStorage.getItem("see"))
+        if(!aux.includes(state)){
+          aux.push(state)
+          localStorage.setItem("see",JSON.stringify(aux))
+          console.log(aux)
+        }
       }
     }
   }
@@ -203,6 +224,7 @@ function App() {
       reset()
       animYel()
       setAddList(false)
+      console.log(JSON.parse(localStorage.getItem("see")))
     }
     if (e.target.value === "v I") {
       setWords(Verb1)
@@ -211,6 +233,7 @@ function App() {
       reset()
       animYel()
       setAddList(false)
+      console.log(JSON.parse(localStorage.getItem("see")))
     }
     if (e.target.value === "v II") {
       setWords(Verb2)
@@ -219,6 +242,7 @@ function App() {
       reset()
       animYel()
       setAddList(false)
+      console.log(JSON.parse(localStorage.getItem("see")))
     }
     if (e.target.value === "milista") {
       if(JSON.parse(localStorage.getItem("milista")) === null){
@@ -234,6 +258,7 @@ function App() {
       localStorage.setItem("state", "0")
       reset()
       animYel()
+      console.log(JSON.parse(localStorage.getItem("see")))
     }
     if (e.target.value === "prep") {
       setWords(Preps)
@@ -242,6 +267,7 @@ function App() {
       reset()
       animYel()
       setAddList(false)
+      console.log(JSON.parse(localStorage.getItem("see")))
     }
     if (e.target.value === "a I") {
       setWords(Adj1)
@@ -258,6 +284,7 @@ function App() {
       reset()
       animYel()
       setAddList(false)
+      console.log(JSON.parse(localStorage.getItem("see")))
     }
     if (e.target.value === "a III") {
       setWords(Adj3)
@@ -266,6 +293,7 @@ function App() {
       reset()
       animYel()
       setAddList(false)
+      console.log(JSON.parse(localStorage.getItem("see")))
     }
     if (e.target.value === "hard") {
       setWords(WordsH)
@@ -274,6 +302,7 @@ function App() {
       reset()
       animYel()
       setAddList(false)
+      console.log(JSON.parse(localStorage.getItem("see")))
     }
   }
 
@@ -309,13 +338,14 @@ function App() {
     setCounterState(counterState = true)
     setGameState(true)
     setInputBoolean(false)
+    localStorage.setItem("see",JSON.stringify([]))
     localStorage.setItem("count", "0")
     localStorage.setItem("state", "0")
     setAnimation(true)
     setTimeout(() => {
       setAnimation(false)
     }, 800)
-    
+
   }
 
   // Animacion amarillo
@@ -345,6 +375,7 @@ function App() {
       localStorage.setItem("milista", JSON.stringify(lista))
       setLista(JSON.parse(localStorage.getItem("milista")))
       if(localStorage.getItem("verbos") === "milista"){
+        localStorage.setItem("see",JSON.stringify([]))
         setWords(JSON.parse(localStorage.getItem("milista")))
       }
       e.target[0].value = ""
@@ -367,6 +398,7 @@ function App() {
       setState(state = 0)
       setCount(count = 0)
       setCountVisor(countVisor = 0)
+      localStorage.setItem("see",JSON.stringify([]))
       setInput("1")
       localStorage.setItem("state", "0")
       localStorage.setItem("count", "0")
@@ -407,6 +439,15 @@ function App() {
               : " Palabras "}
         de Inglés a Español
       </h1>
+
+      {vistasBool &&
+        <div className='Alert'>
+          <div className='a'>
+            <h3>Palabras Vistas:</h3>
+            {JSON.parse(localStorage.getItem("see")).map((i,o)=><p key={o} className="divix">{Words[i].verbo.toLocaleUpperCase()}: {Words[i].respuesta.join(" / ")}</p>)}
+          </div>
+      </div>}    
+      
 
       <MiLista 
         setAddList={setAddList}

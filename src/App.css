@@ -254,7 +254,6 @@ body {
   width: 500px;
   background: #ddd;
   border-radius: 10px;
-  border: 1px solid black;
   background: url("./universe.jpg");
   border: 6px solid rgba(105, 105, 105, 0.486);
   box-sizing: content-box;
@@ -657,6 +656,43 @@ body {
 
 .helpLista h1 {
   font-size: 1.5em;
+}
+
+.Alert {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  background: rgba(119, 119, 119, 0.226);
+  z-index: 1;
+}
+
+.Alert div {
+  height: 600px;
+  width: 500px;
+  background: rgb(240, 240, 240);
+  border-radius: 10px;
+  overflow: auto;
+  margin: 20px 0;
+}
+
+.Alert div h3{
+  margin: 16px 0;
+  font-size: 1.5rem;
+}
+
+.Alert div button{
+  position: relative;
+  bottom: 0;
+}
+
+.divix {
+  height: 30px;
 }
 
 @media (max-height: 801px) {
