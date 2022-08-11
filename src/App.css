@@ -842,6 +842,15 @@ body {
     margin-top: 30px;
   }
 
+  .Alert div {
+    height: 500px;
+    width: 400px;
+  }
+
+  .divix {
+    font-size: 0.95rem;
+  }
+
  
 }
 
@@ -1031,6 +1040,16 @@ body {
       margin-top: 60px;
       margin-bottom: 0px;
     }
+  }
+
+  @media (max-width: 400px) {
+
+    .Alert div {
+      
+      width: 95vw;
+      
+    }
+    
   }
 
   
