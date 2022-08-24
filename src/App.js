@@ -1,7 +1,7 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import Visor from './components/Visor';
-import Main from "./components/Main";
+import Visor from './components/Component/Visor';
+import Main from "./components/Component/Main";
 import WordsE from './components/Words/VerbosE';
 import Verb1 from "./components/Words/Verb-1";
 import Verb2 from './components/Words/Verb-2';
@@ -10,10 +10,10 @@ import Adj2 from "./components/Words/Adj-2";
 import Adj3 from "./components/Words/Adj-3";
 import WordsH from './components/Words/VerbosH';
 import Preps from './components/Words/Preps';
-import Dificulty from './components/Dificulty';
-import Desde from './components/Desde';
-import Help from './components/Help';
-import MiLista from './components/MiLista';
+import Dificulty from './components/Component/Dificulty';
+import Desde from './components/Component/Desde';
+import Help from './components/Component/Help';
+import MiLista from './components/Component/MiLista';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faArrowLeft, faArrowRight, faQuestion, faPlus, faRotateRight} from '@fortawesome/free-solid-svg-icons';
 

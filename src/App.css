@@ -13,7 +13,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url("fondoClaro.jpg");
+  background-image: url("./components/Images/fondoClaro.jpg");
   object-fit: cover;
 }
 
@@ -254,7 +254,7 @@ body {
   width: 500px;
   background: #ddd;
   border-radius: 10px;
-  background: url("./universe.jpg");
+  background: url("./components/Images/universe.jpg");
   border: 6px solid rgba(105, 105, 105, 0.486);
   box-sizing: content-box;
 }
