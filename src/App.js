@@ -16,7 +16,6 @@ import Help from './components/Component/Help';
 import MiLista from './components/Component/MiLista';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faArrowLeft, faArrowRight, faQuestion, faPlus, faRotateRight } from '@fortawesome/free-solid-svg-icons';
-import swal from 'sweetalert';
 
 
 
@@ -36,6 +35,7 @@ function App() {
   let [gameState, setGameState] = useState(true)
   let [helpState, setHelpState] = useState(false)
   let [addlist, setAddList] = useState(false)
+  let [vistasBool, setVistasBool] = useState(false)
 
   // Animation Booleans
   let [animation, setAnimation] = useState(false)
@@ -136,6 +136,10 @@ function App() {
     }, 800)
   }, [])
 
+  window.addEventListener("click",()=>{
+    setVistasBool(false)
+  })
+
   // Logica del Juego
   function handleChange(e) {
     if (e.key === "Enter") {
@@ -148,9 +152,7 @@ function App() {
             setBoolean(false)
             setInputBoolean(true)
             if (JSON.parse(localStorage.getItem("see")).length >= 1) {
-              let palabrasVistas = ""
-              JSON.parse(localStorage.getItem("see")).map((i, o) => palabrasVistas += `${ Words[i].verbo.toLocaleUpperCase()}: ${Words[i].respuesta.join(" / ") } \n\n`)
-              swal("Palabras Vistas:", palabrasVistas)
+              setVistasBool(true)
             }
             setInput("Finalizado")
           } else {
@@ -422,6 +424,15 @@ function App() {
               : " Palabras "}
         de Inglés a Español
       </h1>
+
+      {vistasBool &&
+        <div className='Alert'>
+          <div className='a'>
+            <h3>Palabras Vistas:</h3>
+            {JSON.parse(localStorage.getItem("see")).map((i, o) => <p key={o} className="divix">{Words[i].verbo.toLocaleUpperCase()}: {Words[i].respuesta.join(" / ")}</p>)}
+          </div>
+        </div>}
+
 
       <MiLista
         setAddList={setAddList}
