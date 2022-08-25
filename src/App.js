@@ -15,7 +15,8 @@ import Desde from './components/Component/Desde';
 import Help from './components/Component/Help';
 import MiLista from './components/Component/MiLista';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faArrowLeft, faArrowRight, faQuestion, faPlus, faRotateRight} from '@fortawesome/free-solid-svg-icons';
+import { faEye, faArrowLeft, faArrowRight, faQuestion, faPlus, faRotateRight } from '@fortawesome/free-solid-svg-icons';
+import swal from 'sweetalert';
 
 
 
@@ -35,7 +36,6 @@ function App() {
   let [gameState, setGameState] = useState(true)
   let [helpState, setHelpState] = useState(false)
   let [addlist, setAddList] = useState(false)
-  let [vistasBool, setVistasBool] = useState(false)
 
   // Animation Booleans
   let [animation, setAnimation] = useState(false)
@@ -84,7 +84,7 @@ function App() {
     }
     else if (localStorage.getItem("verbos") === "milista") {
       if (JSON.parse(localStorage.getItem("milista")) === null) {
-        
+
       } else {
         setLista(JSON.parse(localStorage.getItem("milista")))
         setWords(JSON.parse(localStorage.getItem("milista")))
@@ -121,33 +121,20 @@ function App() {
       setEasyBool(true)
     }
 
-    
-    if(localStorage.getItem("see") === null){
-      localStorage.setItem("see",JSON.stringify([]))
+
+    if (localStorage.getItem("see") === null) {
+      localStorage.setItem("see", JSON.stringify([]))
     }
-    
+
     setState(Number(localStorage.getItem("state")))
     setInput(Number(localStorage.getItem("state")) + 1)
     setCountVisor(Number(localStorage.getItem("state")))
     setCount(Number(localStorage.getItem("count")))
     setAnimation(true)
-      setTimeout(() => {
-        setAnimation(false)
+    setTimeout(() => {
+      setAnimation(false)
     }, 800)
   }, [])
-
-
-  window.addEventListener("keydown", (e) => {
-    if (e.key === "Control") {
-      setTimeout(() => {
-        handleClick()
-      })
-    }
-  })
-
-  window.addEventListener("click",()=>{
-    setVistasBool(false)
-  })
 
   // Logica del Juego
   function handleChange(e) {
@@ -160,8 +147,10 @@ function App() {
             setGameState(false)
             setBoolean(false)
             setInputBoolean(true)
-            if(JSON.parse(localStorage.getItem("see")).length >= 1){
-              setVistasBool(true)
+            if (JSON.parse(localStorage.getItem("see")).length >= 1) {
+              let palabrasVistas = ""
+              JSON.parse(localStorage.getItem("see")).map((i, o) => palabrasVistas += `${ Words[i].verbo.toLocaleUpperCase()}: ${Words[i].respuesta.join(" / ") } \n\n`)
+              swal("Palabras Vistas:", palabrasVistas)
             }
             setInput("Finalizado")
           } else {
@@ -182,7 +171,7 @@ function App() {
         } else {
           setAnimRed(true)
           setTimeout(() => {
-            setInput(`${state+1}`)
+            setInput(`${state + 1}`)
           }, 820)
           setTimeout(() => {
             setAnimRed(false)
@@ -196,19 +185,19 @@ function App() {
   // Contador de Palabras vistas
   function handleClick() {
     if (gameState) {
-      setBoolean(!boolean)
-      setAnimViolet(true)
-      setTimeout(() => {
-        setAnimViolet(false)
-      }, 1000)
       if (counterState) {
+        setBoolean(!boolean)
+        setAnimViolet(true)
+        setTimeout(() => {
+          setAnimViolet(false)
+        }, 1000)
         setCounterState(!counterState)
         setCount(count + 1)
         localStorage.setItem("count", `${count + 1}`)
         let aux = JSON.parse(localStorage.getItem("see"))
-        if(!aux.includes(state)){
+        if (!aux.includes(state)) {
           aux.push(state)
-          localStorage.setItem("see",JSON.stringify(aux))
+          localStorage.setItem("see", JSON.stringify(aux))
           console.log(aux)
         }
       }
@@ -242,13 +231,13 @@ function App() {
       setAddList(false)
     }
     if (e.target.value === "milista") {
-      if(JSON.parse(localStorage.getItem("milista")) === null){
+      if (JSON.parse(localStorage.getItem("milista")) === null) {
         setLista([{ verbo: "", respuesta: [] }])
         setWords([{ verbo: "", respuesta: [] }])
-      }else{
+      } else {
         setWords(JSON.parse(localStorage.getItem("milista")))
       }
-      if(lista[0].verbo === ""){
+      if (lista[0].verbo === "") {
         setAddList(true)
       }
       localStorage.setItem("verbos", "milista")
@@ -310,8 +299,8 @@ function App() {
       setAnimation(true)
       setCounterState(true)
       setBoolean(false)
-        setTimeout(() => {
-      setAnimation(false)
+      setTimeout(() => {
+        setAnimation(false)
       }, 800)
       setAnimOrange(true)
       setTimeout(() => {
@@ -330,7 +319,7 @@ function App() {
     setCounterState(counterState = true)
     setGameState(true)
     setInputBoolean(false)
-    localStorage.setItem("see",JSON.stringify([]))
+    localStorage.setItem("see", JSON.stringify([]))
     localStorage.setItem("count", "0")
     localStorage.setItem("state", "0")
     setAnimation(true)
@@ -353,13 +342,14 @@ function App() {
     e.preventDefault()
     if (e.target[0].value !== "" && e.target[1].value !== "" && e.target[0].value.length <= 20 && e.target[1].value.length <= 20) {
       if (lista[0].verbo === "") {
-        lista[0] = { verbo: e.target[0].value.toLowerCase(), respuesta: [e.target[1].value.toLowerCase()] 
+        lista[0] = {
+          verbo: e.target[0].value.toLowerCase(), respuesta: [e.target[1].value.toLowerCase()]
         };
-        if(lista.length === 1 && localStorage.getItem("verbos") === "milista" && lista[0].verbo !== "" && e.target[0].value !== "" && e.target[1].value !== ""){
+        if (lista.length === 1 && localStorage.getItem("verbos") === "milista" && lista[0].verbo !== "" && e.target[0].value !== "" && e.target[1].value !== "") {
           setAnimation(true)
           setTimeout(() => {
             setAnimation(false)
-        }, 800)
+          }, 800)
         }
       } else {
         lista.push({ verbo: e.target[0].value.toLowerCase(), respuesta: [e.target[1].value.toLowerCase()] });
@@ -367,8 +357,8 @@ function App() {
       setLista(lista)
       localStorage.setItem("milista", JSON.stringify(lista))
       setLista(JSON.parse(localStorage.getItem("milista")))
-      if(localStorage.getItem("verbos") === "milista"){
-        localStorage.setItem("see",JSON.stringify([]))
+      if (localStorage.getItem("verbos") === "milista") {
+        localStorage.setItem("see", JSON.stringify([]))
         setWords(JSON.parse(localStorage.getItem("milista")))
       }
       e.target[0].value = ""
@@ -386,12 +376,12 @@ function App() {
     }
     setLista(lista)
     localStorage.setItem("milista", JSON.stringify(lista))
-    if(localStorage.getItem("verbos") === "milista"){
+    if (localStorage.getItem("verbos") === "milista") {
       setWords(JSON.parse(localStorage.getItem("milista")))
       setState(state = 0)
       setCount(count = 0)
       setCountVisor(countVisor = 0)
-      localStorage.setItem("see",JSON.stringify([]))
+      localStorage.setItem("see", JSON.stringify([]))
       setInput("1")
       localStorage.setItem("state", "0")
       localStorage.setItem("count", "0")
@@ -399,7 +389,7 @@ function App() {
     }
     setLista(JSON.parse(localStorage.getItem("milista")))
     setGameState(true)
-    if(localStorage.getItem("verbos") === "milista" && e === 0){
+    if (localStorage.getItem("verbos") === "milista" && e === 0) {
       setAnimation(true)
       setTimeout(() => {
         setAnimation(false)
@@ -433,16 +423,7 @@ function App() {
         de Inglés a Español
       </h1>
 
-      {vistasBool &&
-        <div className='Alert'>
-          <div className='a'>
-            <h3>Palabras Vistas:</h3>
-            {JSON.parse(localStorage.getItem("see")).map((i,o)=><p key={o} className="divix">{Words[i].verbo.toLocaleUpperCase()}: {Words[i].respuesta.join(" / ")}</p>)}
-          </div>
-      </div>}    
-      
-
-      <MiLista 
+      <MiLista
         setAddList={setAddList}
         lista={lista}
         deleteW={deleteW}
