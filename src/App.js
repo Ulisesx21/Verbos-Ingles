@@ -224,7 +224,6 @@ function App() {
       reset()
       animYel()
       setAddList(false)
-      console.log(JSON.parse(localStorage.getItem("see")))
     }
     if (e.target.value === "v I") {
       setWords(Verb1)
@@ -233,7 +232,6 @@ function App() {
       reset()
       animYel()
       setAddList(false)
-      console.log(JSON.parse(localStorage.getItem("see")))
     }
     if (e.target.value === "v II") {
       setWords(Verb2)
@@ -242,7 +240,6 @@ function App() {
       reset()
       animYel()
       setAddList(false)
-      console.log(JSON.parse(localStorage.getItem("see")))
     }
     if (e.target.value === "milista") {
       if(JSON.parse(localStorage.getItem("milista")) === null){
@@ -258,7 +255,6 @@ function App() {
       localStorage.setItem("state", "0")
       reset()
       animYel()
-      console.log(JSON.parse(localStorage.getItem("see")))
     }
     if (e.target.value === "prep") {
       setWords(Preps)
@@ -267,7 +263,6 @@ function App() {
       reset()
       animYel()
       setAddList(false)
-      console.log(JSON.parse(localStorage.getItem("see")))
     }
     if (e.target.value === "a I") {
       setWords(Adj1)
@@ -284,7 +279,6 @@ function App() {
       reset()
       animYel()
       setAddList(false)
-      console.log(JSON.parse(localStorage.getItem("see")))
     }
     if (e.target.value === "a III") {
       setWords(Adj3)
@@ -293,7 +287,6 @@ function App() {
       reset()
       animYel()
       setAddList(false)
-      console.log(JSON.parse(localStorage.getItem("see")))
     }
     if (e.target.value === "hard") {
       setWords(WordsH)
@@ -302,7 +295,6 @@ function App() {
       reset()
       animYel()
       setAddList(false)
-      console.log(JSON.parse(localStorage.getItem("see")))
     }
   }
 
@@ -361,7 +353,8 @@ function App() {
     e.preventDefault()
     if (e.target[0].value !== "" && e.target[1].value !== "" && e.target[0].value.length <= 20 && e.target[1].value.length <= 20) {
       if (lista[0].verbo === "") {
-        lista[0] = { verbo: e.target[0].value.toLowerCase(), respuesta: [e.target[1].value.toLowerCase()] };
+        lista[0] = { verbo: e.target[0].value.toLowerCase(), respuesta: [e.target[1].value.toLowerCase()] 
+        };
         if(lista.length === 1 && localStorage.getItem("verbos") === "milista" && lista[0].verbo !== "" && e.target[0].value !== "" && e.target[1].value !== ""){
           setAnimation(true)
           setTimeout(() => {
