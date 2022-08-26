@@ -136,7 +136,7 @@ function App() {
     }, 800)
   }, [])
 
-  window.addEventListener("click",()=>{
+  document.addEventListener("click",()=>{
     setVistasBool(false)
   })
 
