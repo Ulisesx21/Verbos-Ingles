@@ -83,8 +83,8 @@ function App() {
       setVerb2Bool(true)
     }
     else if (localStorage.getItem("verbos") === "milista") {
-      if (JSON.parse(localStorage.getItem("milista")) === null) {
-
+      if (localStorage.getItem("milista") === null) {
+          
       } else {
         setLista(JSON.parse(localStorage.getItem("milista")))
         setWords(JSON.parse(localStorage.getItem("milista")))
@@ -124,6 +124,12 @@ function App() {
 
     if (localStorage.getItem("see") === null) {
       localStorage.setItem("see", JSON.stringify([]))
+    }
+
+    if (localStorage.getItem("milista") === null) {
+      localStorage.setItem("milista", JSON.stringify([{ verbo: "", respuesta: [] }]))
+    }else{
+      setLista(JSON.parse(localStorage.getItem("milista")))
     }
 
     setState(Number(localStorage.getItem("state")))

@@ -1,4 +1,4 @@
-export default function Desde({ changeState, length, restart, iconrestart, words}) {
+export default function Desde({ changeState, length, restart, iconrestart, words }) {
     return (
         <>
             <div className="restart" onClick={restart}>{iconrestart}</div>

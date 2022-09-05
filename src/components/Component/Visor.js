@@ -1,4 +1,4 @@
-export default function Visor({ completado, arrlength, icon, visor}){
+export default function Visor({ completado, arrlength, icon, visor }){
     return(
         <div className="visor-container">
             <div className="porcentaje-container">

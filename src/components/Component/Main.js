@@ -12,7 +12,7 @@ export default function Main(props) {
                         ${props.anim5 ? "anim5" : ""} 
                         ${props.anim6 ? "anim6" : ""}`}>
             <h1 className={`verbo-principal ${props.anim ? "anim" : ""}`}>{props.Verbos[props.count].verbo === "" ? "-" : props.Verbos[props.count].verbo}</h1>
-            <input className="input" onKeyDown={props.handleChange} placeholder="Escriba aqui..." disabled={props.inputBoolean} autoFocus="true"/>
+            <input className="input" onKeyDown={props.handleChange} placeholder="Escriba aqui..." disabled={props.inputBoolean} autoFocus={true}/>
             <div className={`show`} onClick={props.handleClick}>
                 {props.boolean ? `${respuesta1 ? respuesta1 : ""} ${respuesta2 ? "/" : ""} ${respuesta2 ? respuesta2 : ""}` : <span className="showicon">{props.icon}</span>}
             </div>
