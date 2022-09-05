@@ -142,6 +142,9 @@ function App() {
 
   // Logica del Juego
   function handleChange(e) {
+    if(e.key === "Control"){
+      handleClick()
+    }
     if (e.key === "Enter") {
       if (gameState) {
         if (Words[state].respuesta.includes(e.target.value.toLowerCase())) {
