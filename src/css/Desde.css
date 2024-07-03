@@ -1,0 +1,99 @@
+.restart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 43px;
+  width: 43px;
+  border-radius: 50%;
+  background: rgb(235, 235, 235);
+  box-shadow: 3px 3px 2px black;
+  cursor: pointer;
+  padding: 10px;
+  margin-top: 50px;
+  font-size: 20px;
+  border: none;
+}
+
+.restart:hover {
+  background: rgb(230, 230, 230);
+}
+
+.restart:active {
+  background: rgb(235, 235, 235);
+  transform: scale(0.95);
+}
+
+.Desde {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  padding: 8px;
+  background: rgb(235, 235, 235);
+  box-shadow: 3px 3px 2px black;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+.Desde h3 {
+  font-size: 1.5em;
+  text-align: center;
+  padding-right: 10px;
+}
+
+.Desde input {
+  height: 30px;
+  width: 80px;
+  border: 1px solid black;
+  padding: 5px;
+  font-size: 16.5px;
+  outline: none;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  background: rgb(235, 235, 235);
+}
+
+@media (min-width: 1920px) {
+  .restart {
+    margin-top: 80px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 1230px) {
+  .restart {
+    margin-top: 45px;
+    margin-bottom: 15px;
+  }
+
+  .Desde {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 990px) {
+  .restart {
+    margin-top: 60px;
+  }
+
+  .Desde {
+    margin-top: 60px;
+  }
+}
+
+@media (max-height: 801px) {
+  .restart {
+    margin-top: 30px;
+  }
+
+  .Desde {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .restart {
+    margin-top: 60px;
+    margin-bottom: 0px;
+  }
+}

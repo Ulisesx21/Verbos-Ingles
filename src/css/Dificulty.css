@@ -1,0 +1,61 @@
+.dificulty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  padding: 8px;
+  background: rgb(235, 235, 235);
+  box-shadow: 3px 3px 2px black;
+  border-radius: 10px;
+}
+
+.dificulty h3 {
+  margin-right: 10px;
+  font-size: 1.5em;
+}
+
+.dificulty select {
+  height: 30px;
+  font-size: 15px;
+  padding: 1px;
+  border-radius: 10px;
+  border: 1px solid black;
+  background: rgb(235, 235, 235);
+  cursor: pointer;
+}
+
+.dificulty select:hover {
+  background: rgb(225, 225, 225);
+}
+
+.dificulty select:active {
+  background: rgb(235, 235, 235);
+}
+
+@media (min-width: 1920px) {
+  .dificulty {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 990px) {
+  .dificulty {
+    margin-top: 45px;
+  }
+
+  .dificulty h3 {
+    margin-right: 12px;
+    font-size: 1.5em;
+  }
+
+  .dificulty select {
+    height: 30px;
+    font-size: 15px;
+  }
+}
+
+@media (max-height: 801px) {
+  .dificulty {
+    margin-top: 30px;
+  }
+}
